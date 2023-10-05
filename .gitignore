@@ -1,1 +1,2 @@
-assets/node_modules/*
+.DS_Store
+./product-detail-pro/assets/node_modules

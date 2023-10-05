@@ -1,0 +1,123 @@
+{
+    "ProductData": {
+        "ProductName":  "Blazer",
+        "Price": "643 USD",
+        "Delivery": "Delivery 2-3 weeks",
+        "Image": "/product-detail-pro/images//MAIN_1.webp"
+    },
+    "Data": {
+        "Fabric": {
+            "Info": {
+                "Style": "FabricComponent"
+            },
+            "Options": {
+                "Fabric1": {
+                    "name": "Fabric 1",
+                    "image": "/product-detail-pro/images/fabric1.avif"
+                },
+                "Fabric2": {
+                    "name": "Fabric 2",
+                    "image": "/product-detail-pro/images/fabric2.avif"
+                },
+                "Fabric3": {
+                    "name": "Fabric 3",
+                    "image": "/product-detail-pro/images/fabric3.avif"
+                },
+                "Fabric4": {
+                    "name": "Fabric 4",
+                    "image": "/product-detail-pro/images/fabric4.avif"
+                },
+                "Fabric5": {
+                    "name": "Fabric 5",
+                    "image": "/product-detail-pro/images/fabric5.avif"
+                },
+                "Fabric6": {
+                    "name": "Fabric 6",
+                    "image": "/product-detail-pro/images/fabric6.avif"
+                },
+                "Fabric7": {
+                    "name": "Fabric 7",
+                    "image": "/product-detail-pro/images/fabric7.avif"
+                },
+                "Fabric8": {
+                    "name": "Fabric 8",
+                    "image": "/product-detail-pro/images/fabric8.avif"
+                },
+                "Fabric9": {
+                    "name": "Fabric 9",
+                    "image": "/product-detail-pro/images/fabric9.avif"
+                },
+                "Fabric10": {
+                    "name": "Fabric 10",
+                    "image": "/product-detail-pro/images/fabric10.avif"
+                }
+            }
+        },
+        "Styles": {
+            "Style" : {
+                "Info": {
+                    "Name": "Style",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "NotchLapel": {
+                        "name": "Notch Lapel",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "PeakLapel": {
+                        "name": "Peak Lapel",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "ShawlLapel": {
+                        "name": "Shawl Lapel",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    }
+                }
+            },
+            "Closure" : {
+                "Info": {
+                    "Name": "Closure",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "Button1": {
+                        "name": "1 Button",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "Button2": {
+                        "name": "2 Button",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "Button25": {
+                        "name": "2.5 Button",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "Button3": {
+                        "name": "3 Button",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "ButtonsDoubleBreasted4": {
+                        "name": "4 Buttons Double Breasted",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    },
+                    "ButtonsDoubleBreasted6": {
+                        "name": "6 Buttons Double Breasted",
+                        "image": "/product-detail-pro/images/fabric10.avif"
+                    }
+                }
+            }  
+        }
+    },
+    "Mapper": {
+        "Fabric:Fabric1": "/product-detail-pro/images/MAIN_1.webp",
+        "Fabric:Fabric2": "/product-detail-pro/images/MAIN_2.webp",
+        "Fabric:Fabric3": "/product-detail-pro/images//MAIN_3.webp",
+        "Fabric:Fabric4": "/product-detail-pro/images//MAIN_4.webp",
+        "Fabric:Fabric5": "/product-detail-pro/images//MAIN_1.webp",
+        "Fabric:Fabric6": "/product-detail-pro/images//MAIN_2.webp",
+        "Fabric:Fabric7": "/product-detail-pro/images//MAIN_3.webp",
+        "Fabric:Fabric8": "/product-detail-pro/images//MAIN_4.webp",
+        "Fabric:Fabric9": "/product-detail-pro/images//MAIN_1.webp",
+        "Fabric:Fabric10": "/product-detail-pro/images//MAIN_2.webp"
+    }
+}

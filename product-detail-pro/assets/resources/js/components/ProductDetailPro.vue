@@ -80,8 +80,8 @@
                     </div>
                     <div class="overflow-y-auto h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? 'block' : 'hidden'">
                         <div class="w-[85%] mx-auto my-1">
-                        <div v-for="(styleData, styleName) in styleDataDetail ">
-                           <StyleDetailComponent :title="styleData.name"/>
+                        <div v-for="(styleData, styleName ) in styleDataDetail " @click.prevent="chooseStyleDetail(styleName)">
+                           <StyleDetailComponent :title="styleData.name" :description="styleData.description"/>
                          </div>
                          
                         </div>
@@ -168,7 +168,12 @@ export default {
         console.log(styleData);
         this.activeTab = "StyleDetail";
         this.styleDataDetail = styleData.Options;
+    },
+    chooseStyleDetail(styleName)
+    {
+        this.activeTab = "Style";
     }
+
   }
 }
 </script>

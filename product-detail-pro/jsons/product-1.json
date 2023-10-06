@@ -62,14 +62,17 @@
                 "Options": {
                     "NotchLapel": {
                         "name": "Notch Lapel",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/fabric10.avif"
                     },
                     "PeakLapel": {
                         "name": "Peak Lapel",
+                        "description": "Slanted welted pockets are slightly angled for easier access2.",
                         "image": "/product-detail-pro/images/fabric10.avif"
                     },
                     "ShawlLapel": {
                         "name": "Shawl Lapel",
+                        "description": "Slanted welted pockets are slightly angled for easier access3.",
                         "image": "/product-detail-pro/images/fabric10.avif"
                     }
                 }

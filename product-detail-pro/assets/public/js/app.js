@@ -101,6 +101,9 @@ __webpack_require__.r(__webpack_exports__);
       console.log(styleData);
       this.activeTab = "StyleDetail";
       this.styleDataDetail = styleData.Options;
+    },
+    chooseStyleDetail: function chooseStyleDetail(styleName) {
+      this.activeTab = "Style";
     }
   }
 });
@@ -146,7 +149,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'StyleDetailComponent',
   props: {
-    title: String
+    title: String,
+    description: String
   },
   methods: {
     emitChangeOption: function emitChangeOption(e) {
@@ -356,9 +360,17 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "w-[85%] mx-auto my-1"
   }, _vm._l(_vm.styleDataDetail, function (styleData, styleName) {
-    return _c("div", [_c("StyleDetailComponent", {
+    return _c("div", {
+      on: {
+        click: function click($event) {
+          $event.preventDefault();
+          return _vm.chooseStyleDetail(styleName);
+        }
+      }
+    }, [_c("StyleDetailComponent", {
       attrs: {
-        title: styleData.name
+        title: styleData.name,
+        description: styleData.description
       }
     })], 1);
   }), 0)]), _vm._v(" "), _c("div", {
@@ -463,7 +475,7 @@ var render = function render() {
     staticClass: "text-start text-sm font-light w-2/3"
   }, [_c("span", {
     staticClass: "text-lg font-bold"
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c("br"), _vm._v("A single-breasted tailored overcoat with a notch lapel and mid-thigh length.")]), _c("img", {
+  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c("br"), _vm._v(_vm._s(_vm.description))]), _c("img", {
     staticClass: "w-1/4",
     attrs: {
       src: "https://cdn.suitsupply.com/image/upload/b_rgb:ffffff,c_fit,f_auto,h_800,q_auto:good,w_800/custommade/thumbs2/fits/coat/vicenza",

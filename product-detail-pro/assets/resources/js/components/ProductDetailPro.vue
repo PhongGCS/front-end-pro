@@ -44,7 +44,7 @@
                         </div>
                         <div class="w-[85%] mx-auto my-1">
                             <div>
-                                <div v-for="(styleData, styleName) in styles">
+                                <div v-for="(styleData, styleName) in styles" @click.prevent="changeStyle(styleData)">
                                 <StyleComponent :title="styleName"/>
                                 </div>
                             </div>
@@ -78,6 +78,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="overflow-y-auto h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? 'block' : 'hidden'">
+                        <div class="w-[85%] mx-auto my-1">
+                        <div v-for="(styleData, styleName) in styleDataDetail ">
+                           <StyleDetailComponent :title="styleData.name"/>
+                         </div>
+                         
+                        </div>
+                    </div>
                     <div class="mt-auto border-t pt-4">
                         <div class="flex justify-between items-center w-[85%] mx-auto mt-auto mb-8">
                             <div>
@@ -102,6 +110,7 @@
 import TabItemHeading from './TabItemHeading.vue';
 import FabricComponent from './FabricComponent.vue'
 import StyleComponent from './StyleComponent.vue'
+import StyleDetailComponent from './StyleDetailComponent.vue'
 
 export default {
   name: 'ProductDetailPro',
@@ -118,13 +127,16 @@ export default {
         mainImage: null,
         totalSelectedData: {
             keyFabric: null
-        }
+        },
+        styleDataDetail: null
+        
     }
   },
   components: {
     FabricComponent,
     TabItemHeading,
     StyleComponent,
+    StyleDetailComponent
   },
   beforeMount() {
     this.mainImage = this.productData.Image
@@ -152,6 +164,11 @@ export default {
     changeTab(tabName) {
       this.activeTab = tabName;
     },
+    changeStyle(styleData) {
+        console.log(styleData);
+        this.activeTab = "StyleDetail";
+        this.styleDataDetail = styleData.Options;
+    }
   }
 }
 </script>

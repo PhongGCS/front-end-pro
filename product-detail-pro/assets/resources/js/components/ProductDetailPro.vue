@@ -44,8 +44,8 @@
                         </div>
                         <div class="w-[85%] mx-auto my-1">
                             <div>
-                                <div v-if="fabric.Info.Style === 'StyleComponent'">
-                                    
+                                <div v-for="(styleData, styleName) in styles">
+                                <StyleComponent :title="styleName"/>
                                 </div>
                             </div>
                         </div>
@@ -101,6 +101,8 @@
 <script>
 import TabItemHeading from './TabItemHeading.vue';
 import FabricComponent from './FabricComponent.vue'
+import StyleComponent from './StyleComponent.vue'
+
 export default {
   name: 'ProductDetailPro',
   props: {
@@ -121,7 +123,8 @@ export default {
   },
   components: {
     FabricComponent,
-    TabItemHeading
+    TabItemHeading,
+    StyleComponent,
   },
   beforeMount() {
     this.mainImage = this.productData.Image

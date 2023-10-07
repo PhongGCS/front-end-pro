@@ -56,7 +56,7 @@
         "Styles": {
             "Style" : {
                 "Info": {
-                    "Name": "Style",
+                    "name": "Style",
                     "Style": "StyleComponent"
                 },
                 "Options": {
@@ -79,7 +79,7 @@
             },
             "Closure" : {
                 "Info": {
-                    "Name": "Closure",
+                    "name": "Closure",
                     "Style": "StyleComponent"
                 },
                 "Options": {

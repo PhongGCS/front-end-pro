@@ -19,7 +19,6 @@
             :product-data="<?= htmlspecialchars(json_encode($productData->ProductData)) ?>"
             :Fabric="<?= htmlspecialchars(json_encode($productData->Data->Fabric)) ?>" 
             :Styles="<?= htmlspecialchars(json_encode($productData->Data->Styles)) ?>"
-            :Mapper="<?= htmlspecialchars(json_encode($productData->Mapper)) ?>"
             :mapping="<?= htmlspecialchars(json_encode($productData->Mapping)) ?>"
             />
     </div>

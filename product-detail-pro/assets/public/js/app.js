@@ -59,7 +59,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     productData: Object,
     fabric: Object,
     styles: Object,
-    mapper: Object,
     mapping: Array
   },
   data: function data() {
@@ -388,7 +387,7 @@ var render = function render() {
       }
     }, [_c("StyleComponent", {
       attrs: {
-        title: styleName,
+        title: styleData.Info.name,
         selected: _vm.totalSelectedData.styles[styleName]
       }
     })], 1);

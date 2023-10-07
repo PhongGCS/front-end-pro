@@ -41,7 +41,7 @@
                         <div class="w-[85%] mx-auto my-1">
                             <div>
                                 <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
-                                    <StyleComponent :title="styleName" :selected="totalSelectedData.styles[styleName]" />
+                                    <StyleComponent :title="styleData.Info.name" :selected="totalSelectedData.styles[styleName]" />
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,6 @@ export default {
     productData: Object,
     fabric: Object,
     styles: Object,
-    mapper: Object,
     mapping: Array
   },
   data() {

@@ -43,6 +43,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FabricComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FabricComponent.vue */ "./resources/js/components/FabricComponent.vue");
 /* harmony import */ var _StyleComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./StyleComponent.vue */ "./resources/js/components/StyleComponent.vue");
 /* harmony import */ var _StyleDetailComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./StyleDetailComponent.vue */ "./resources/js/components/StyleDetailComponent.vue");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 
 
 
@@ -53,7 +59,8 @@ __webpack_require__.r(__webpack_exports__);
     productData: Object,
     fabric: Object,
     styles: Object,
-    mapper: Object
+    mapper: Object,
+    mapping: Array
   },
   data: function data() {
     return {
@@ -61,9 +68,11 @@ __webpack_require__.r(__webpack_exports__);
       activeTab: 'Fabric',
       mainImage: null,
       totalSelectedData: {
-        keyFabric: null
+        keyFabric: null,
+        styles: {}
       },
-      styleDataDetail: null
+      styleDataDetail: null,
+      currentStyleKey: null
     };
   },
   components: {
@@ -77,33 +86,85 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {},
   methods: {
+    findImage: function findImage() {
+      var _this$totalSelectedDa = this.totalSelectedData,
+        keyFabric = _this$totalSelectedDa.keyFabric,
+        styles = _this$totalSelectedDa.styles;
+      var styleKeys = Object.values(styles).map(function (style) {
+        return style.key;
+      }).filter(function (key) {
+        return key !== undefined;
+      });
+      var mapping = this.mapping.find(function (item) {
+        var keysToCompare = [keyFabric.key].concat(_toConsumableArray(styleKeys));
+        return JSON.stringify(item.key) === JSON.stringify(keysToCompare);
+      });
+      return mapping ? mapping.image : null;
+    },
     getMapperKey: function getMapperKey() {
       var key = "";
-      if (this.totalSelectedData.keyFabric) {
-        key += "Fabric" + ":" + this.totalSelectedData.keyFabric;
+      if (this.totalSelectedData.keyFabric.key) {
+        key += "Fabric" + ":" + this.totalSelectedData.keyFabric.key;
       }
-      if (!key) throw Error("Key not found");
+      //console.log(this.totalSelectedData.keyFabric && this.totalSelectedData.keyFabric.name);
+      if (key === "") throw Error("Key not found");
       return key;
     },
-    changeFabric: function changeFabric(keyFabric) {
+    changeFabric: function changeFabric(fabricData, keyFabric) {
       console.log("Get image match " + keyFabric);
-      this.totalSelectedData.keyFabric = keyFabric;
-      var mapperKey = this.getMapperKey();
-      var mainImage = this.mapper[mapperKey];
-      if (mainImage != this.mainImage) {
+      this.totalSelectedData.keyFabric = {
+        key: keyFabric,
+        name: fabricData.name
+      };
+      //   let mapperKey = this.getMapperKey();
+      //   let mainImage = this.mapper[mapperKey];
+      var mainImage = this.findImage();
+      if (mainImage && mainImage != this.mainImage) {
         this.mainImage = mainImage;
       }
     },
     changeTab: function changeTab(tabName) {
       this.activeTab = tabName;
     },
-    changeStyle: function changeStyle(styleData) {
-      console.log(styleData);
+    changeStyle: function changeStyle(styleData, styleKey) {
       this.activeTab = "StyleDetail";
       this.styleDataDetail = styleData.Options;
+      this.totalSelectedData.styles[styleKey] = {};
+      this.currentStyleKey = styleKey;
     },
-    chooseStyleDetail: function chooseStyleDetail(styleName) {
+    chooseStyleDetail: function chooseStyleDetail(styleName, styleData) {
       this.activeTab = "Style";
+      if (this.currentStyleKey) {
+        this.totalSelectedData.styles[this.currentStyleKey] = {
+          key: styleName,
+          name: styleData.name
+        };
+        var mainImage = this.findImage();
+        if (mainImage != this.mainImage) {
+          this.mainImage = mainImage;
+        }
+      } else {
+        throw new Error("Incorrect currentStyleKey: " + currentStyleKey);
+      }
+    },
+    prevChange: function prevChange() {
+      var tab = ['Fabric', 'Style', 'Size', 'Summary'];
+      var currentIndex = tab.indexOf(this.activeTab);
+      if (currentIndex > 0) {
+        this.activeTab = tab[currentIndex - 1];
+      } else {
+        if (this.activeTab === 'StyleDetail') {
+          this.activeTab = 'Style';
+        }
+      }
+    },
+    nextChange: function nextChange() {
+      var tab = ['Fabric', 'Style', 'Size', 'Summary'];
+      var currentIndex = tab.indexOf(this.activeTab);
+      console.log(currentIndex + "__" + this.activeTab);
+      if (currentIndex >= 0 && currentIndex < tab.length - 1) {
+        this.activeTab = tab[currentIndex + 1];
+      }
     }
   }
 });
@@ -124,7 +185,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'StyleComponent',
   props: {
-    title: String
+    title: String,
+    selected: Object
   },
   methods: {
     emitChangeOption: function emitChangeOption(e) {
@@ -300,7 +362,7 @@ var render = function render() {
       on: {
         click: function click($event) {
           $event.preventDefault();
-          return _vm.changeFabric(fabricName);
+          return _vm.changeFabric(fabricData, fabricName);
         }
       }
     }, [_c("FabricComponent", {
@@ -317,15 +379,17 @@ var render = function render() {
     staticClass: "w-[85%] mx-auto my-1"
   }, [_c("div", _vm._l(_vm.styles, function (styleData, styleName) {
     return _c("div", {
+      key: styleName,
       on: {
         click: function click($event) {
           $event.preventDefault();
-          return _vm.changeStyle(styleData);
+          return _vm.changeStyle(styleData, styleName);
         }
       }
     }, [_c("StyleComponent", {
       attrs: {
-        title: styleName
+        title: styleName,
+        selected: _vm.totalSelectedData.styles[styleName]
       }
     })], 1);
   }), 0)])]), _vm._v(" "), _c("div", {
@@ -338,33 +402,18 @@ var render = function render() {
     "class": _vm.activeTab === "Summary" ? "block" : "hidden"
   }, [_vm._m(3), _vm._v(" "), _c("div", {
     staticClass: "w-[85%] mx-auto my-1"
-  }, [_c("div", [_vm.fabric.Info.Style === "FabricComponent" ? _c("div", _vm._l(_vm.fabric.Options, function (fabricData, fabricName) {
-    return _c("div", {
-      key: fabricName,
-      on: {
-        click: function click($event) {
-          $event.preventDefault();
-          return _vm.changeFabric(fabricName);
-        }
-      }
-    }, [_c("FabricComponent", {
-      attrs: {
-        title: fabricData.name,
-        price: fabricData.price,
-        imageUrl: fabricData.image
-      }
-    })], 1);
-  }), 0) : _vm._e()])])]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
     staticClass: "overflow-y-auto h-auto tab-style-detail",
     "class": _vm.activeTab === "StyleDetail" ? "block" : "hidden"
   }, [_c("div", {
     staticClass: "w-[85%] mx-auto my-1"
   }, _vm._l(_vm.styleDataDetail, function (styleData, styleName) {
     return _c("div", {
+      key: styleName,
       on: {
         click: function click($event) {
           $event.preventDefault();
-          return _vm.chooseStyleDetail(styleName);
+          return _vm.chooseStyleDetail(styleName, styleData);
         }
       }
     }, [_c("StyleDetailComponent", {
@@ -381,7 +430,25 @@ var render = function render() {
     staticClass: "text-xs text-gray-400"
   }, [_vm._v(" " + _vm._s(_vm.productData.Delivery))]), _vm._v(" "), _c("h3", {
     staticClass: "text-sm text-gray-800 font-light"
-  }, [_vm._v(_vm._s(_vm.productData.ProductName) + " - " + _vm._s(_vm.productData.Price))])]), _vm._v(" "), _vm._m(4)])])])])])])]);
+  }, [_vm._v(_vm._s(_vm.productData.ProductName) + " - " + _vm._s(_vm.productData.Price))])]), _vm._v(" "), _c("div", {
+    staticClass: "flex"
+  }, [_c("button", {
+    staticClass: "border px-11 py-2.5 text-sm rounded-md mx-1",
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.prevChange();
+      }
+    }
+  }, [_vm._v("Prev")]), _vm._v(" "), _c("button", {
+    staticClass: "border px-11 py-2.5 text-sm bg-[#2d2d2c] text-white rounded-md mx-1",
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.nextChange();
+      }
+    }
+  }, [_vm._v("Next")])])])])])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -407,16 +474,6 @@ var staticRenderFns = [function () {
   return _c("div", [_c("h3", {
     staticClass: "text-center font-light text-xl text-gray-900 pt-10 py-2"
   }, [_vm._v("Summary")])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "flex"
-  }, [_c("button", {
-    staticClass: "border px-11 py-2.5 text-sm rounded-md mx-1"
-  }, [_vm._v("Prev")]), _vm._v(" "), _c("button", {
-    staticClass: "border px-11 py-2.5 text-sm bg-[#2d2d2c] text-white rounded-md mx-1"
-  }, [_vm._v("Next")])]);
 }];
 render._withStripped = true;
 
@@ -444,7 +501,7 @@ var render = function render() {
     staticClass: "border border-gray-300 hover:border-gray-400 rounded-md text-sm w-[85%] flex justify-between py-5 font-light px-4"
   }, [_vm._v(_vm._s(_vm.title) + " "), _c("span", {
     staticClass: "text-gray-500 text-end"
-  }, [_vm._v("Bleecker")])])]);
+  }, [_vm._v(_vm._s(_vm.selected ? _vm.selected.name : ""))])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

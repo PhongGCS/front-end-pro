@@ -63,17 +63,17 @@
                     "NotchLapel": {
                         "name": "Notch Lapel",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "PeakLapel": {
                         "name": "Peak Lapel",
                         "description": "Slanted welted pockets are slightly angled for easier access2.",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "ShawlLapel": {
                         "name": "Shawl Lapel",
                         "description": "Slanted welted pockets are slightly angled for easier access3.",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     }
                 }
             },
@@ -85,42 +85,412 @@
                 "Options": {
                     "Button1": {
                         "name": "1 Button",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "Button2": {
                         "name": "2 Button",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "Button25": {
                         "name": "2.5 Button",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "Button3": {
                         "name": "3 Button",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "ButtonsDoubleBreasted4": {
                         "name": "4 Buttons Double Breasted",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     },
                     "ButtonsDoubleBreasted6": {
                         "name": "6 Buttons Double Breasted",
-                        "image": "/product-detail-pro/images/fabric10.avif"
+                        "image": "/product-detail-pro/images/vicenza.avif"
                     }
                 }
-            }  
+            },
+            "ChestPocket" : {
+                "Info": {
+                    "name": "Chest Pocket",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "BoatShape": {
+                        "name": "Boat Shape",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Patch": {
+                        "name": "Patch",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "RoundedPatch": {
+                        "name": "Rounded Patch",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "PleatedPatch": {
+                        "name": "Pleated Patch",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            },
+            "SidePocket" : {
+                "Info": {
+                    "name": "Side Pocket",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "SmallFlap": {
+                        "name": "Small Flap",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "LargeFlap": {
+                        "name": "Large Flap",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "SlantedFlap": {
+                        "name": "Slanted Flap",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Jetted": {
+                        "name": "Jetted",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "SlantedJetted": {
+                        "name": "Slanted Jetted",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Patch": {
+                        "name": "Patch",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "RoundedPatch": {
+                        "name": "Rounded Patch",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "PleatedPatch": {
+                        "name": "Pleated Patch",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            },
+            "TicketPocket" : {
+                "Info": {
+                    "name": "Ticket Pocket",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "TicketPocketYes": {
+                        "name": "Yes",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "TicketPocketNo": {
+                        "name": "No",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif" 
+                    }
+                }
+            },
+            "Vent" : {
+                "Info": {
+                    "name": "Vent",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "Novent": {
+                        "name": "No vent",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Singlevent": {
+                        "name": "Single vent",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif" 
+                    },
+                    "Doublevent": {
+                        "name": "Double vent",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            },
+            "SleeveButtons" : {
+                "Info": {
+                    "name": "Sleeve Buttons",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "KissingButtons3": {
+                        "name": "3 Kissing Buttons",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "KissingButtons4": {
+                        "name": "4 Kissing Buttons",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif" 
+                    },
+                    "KissingButtons5": {
+                        "name": "5 Kissing Buttons",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            },
+            "LiningType" : {
+                "Info": {
+                    "name": "Lining Type",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "FullLined": {
+                        "name": "Full Lined",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Lined1_2": {
+                        "name": "1/2 Lined",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif" 
+                    },
+                    "ButterflyLining": {
+                        "name": "Butterfly Lining",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Unlined": {
+                        "name": "Unlined",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            },
+            "Shoulder" : {
+                "Info": {
+                    "name": "Shoulder",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "Structured": {
+                        "name": "Structured",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Padded": {
+                        "name": "Padded",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif" 
+                    },
+                    "Natural": {
+                        "name": "Natural",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "Unstructured": {
+                        "name": "Unstructured",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            },
+            "AMF" : {
+                "Info": {
+                    "name": "AMF",
+                    "Style": "StyleComponent"
+                },
+                "Options": {
+                    "AMFNo": {
+                        "name": "No",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "mm2": {
+                        "name": "2 mm",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif" 
+                    },
+                    "mm6": {
+                        "name": "6 mm",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    },
+                    "DoubleAMF": {
+                        "name": "Double AMF",
+                        "description": "Slanted welted pockets are slightly angled for easier access1.",
+                        "image": "/product-detail-pro/images/vicenza.avif"
+                    }
+                }
+            }
         }
     },
-    "Mapper": {
-        "Fabric:Fabric1": "/product-detail-pro/images/MAIN_1.webp",
-        "Fabric:Fabric2": "/product-detail-pro/images/MAIN_2.webp",
-        "Fabric:Fabric3": "/product-detail-pro/images//MAIN_3.webp",
-        "Fabric:Fabric4": "/product-detail-pro/images//MAIN_4.webp",
-        "Fabric:Fabric5": "/product-detail-pro/images//MAIN_1.webp",
-        "Fabric:Fabric6": "/product-detail-pro/images//MAIN_2.webp",
-        "Fabric:Fabric7": "/product-detail-pro/images//MAIN_3.webp",
-        "Fabric:Fabric8": "/product-detail-pro/images//MAIN_4.webp",
-        "Fabric:Fabric9": "/product-detail-pro/images//MAIN_1.webp",
-        "Fabric:Fabric10": "/product-detail-pro/images//MAIN_2.webp"
-    }
+    "Mapping": [
+        {   
+            "key":["Fabric1"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric2"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric3"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric4"],
+            "image": "/product-detail-pro/images/MAIN_4.webp"
+        },
+        {   
+            "key":["Fabric6"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric7"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric8"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric9"],
+            "image": "/product-detail-pro/images/MAIN_4.webp"
+        },
+        {   
+            "key":["Fabric10"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric1", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric1", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric1", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric2", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric2", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric2", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric3", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric3", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric3", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric4", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric4", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric4", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric5", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric5", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric5", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric6", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric6", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric6", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric7", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric7", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric7", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric8", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric8", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric8", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric9", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric9", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric9", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        },
+        {   
+            "key":["Fabric10", "NotchLapel"],
+            "image": "/product-detail-pro/images/MAIN_1.webp"
+        },
+        {   
+            "key":["Fabric10", "PeakLapel"],
+            "image": "/product-detail-pro/images/MAIN_2.webp"
+        },
+        {   
+            "key":["Fabric10", "ShawlLapel"],
+            "image": "/product-detail-pro/images/MAIN_3.webp"
+        }
+    ]
 }

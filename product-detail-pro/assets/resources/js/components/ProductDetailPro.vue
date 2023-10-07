@@ -23,13 +23,9 @@
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Select your fabric</h3>
                         </div>
                         <div class="w-[85%] mx-auto my-1">
-                            <!-- <div class="w-full grid gap-2 grid-cols-2 mb-2">
-                                <button class=" my-4 py-2 border border-gray-200 hover:border-gray-400 rounded-md ">Filter</button>
-                                <button class=" my-4 py-2 border border-gray-200 hover:border-gray-400 rounded-md ">Search</button>
-                            </div> -->
                             <div>
                                 <div v-if="fabric.Info.Style === 'FabricComponent'">
-                                    <div v-for="(fabricData, fabricName) in fabric.Options" :key="fabricName" @click.prevent="changeFabric(fabricName)">
+                                    <div v-for="(fabricData, fabricName) in fabric.Options" :key="fabricName" @click.prevent="changeFabric(fabricData, fabricName)">
                                         <FabricComponent :title="fabricData.name" :price="fabricData.price" :imageUrl="fabricData.image" />
                                     </div>
                                 </div>
@@ -44,13 +40,12 @@
                         </div>
                         <div class="w-[85%] mx-auto my-1">
                             <div>
-                                <div v-for="(styleData, styleName) in styles" @click.prevent="changeStyle(styleData)">
-                                <StyleComponent :title="styleName"/>
+                                <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
+                                    <StyleComponent :title="styleName" :selected="totalSelectedData.styles[styleName]" />
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="overflow-y-auto h-auto tab-size" :class="activeTab === 'Size' ? 'block' : 'hidden'">
                         
                         <div>
@@ -65,22 +60,12 @@
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Summary</h3>
                         </div>
                         <div class="w-[85%] mx-auto my-1">
-                            <!-- <div class="w-full grid gap-2 grid-cols-2 mb-2">
-                                <button class=" my-4 py-2 border border-gray-200 hover:border-gray-400 rounded-md ">Filter</button>
-                                <button class=" my-4 py-2 border border-gray-200 hover:border-gray-400 rounded-md ">Search</button>
-                            </div> -->
-                            <div>
-                                <div v-if="fabric.Info.Style === 'FabricComponent'">
-                                    <div v-for="(fabricData, fabricName) in fabric.Options" :key="fabricName" @click.prevent="changeFabric(fabricName)">
-                                        <FabricComponent :title="fabricData.name" :price="fabricData.price" :imageUrl="fabricData.image" />
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="overflow-y-auto h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? 'block' : 'hidden'">
                         <div class="w-[85%] mx-auto my-1">
-                        <div v-for="(styleData, styleName ) in styleDataDetail " @click.prevent="chooseStyleDetail(styleName)">
+                        <div v-for="(styleData, styleName ) in styleDataDetail" :key="styleName" @click.prevent="chooseStyleDetail(styleName, styleData)">
                            <StyleDetailComponent :title="styleData.name" :description="styleData.description"/>
                          </div>
                          
@@ -93,8 +78,8 @@
                                 <h3 class="text-sm text-gray-800 font-light">{{productData.ProductName}} - {{productData.Price}}</h3>
                             </div>
                             <div class="flex">
-                                <button class="border px-11 py-2.5 text-sm rounded-md mx-1">Prev</button>
-                                <button class="border px-11 py-2.5 text-sm bg-[#2d2d2c] text-white rounded-md mx-1">Next</button>
+                                <button @click.prevent="prevChange()" class="border px-11 py-2.5 text-sm rounded-md mx-1">Prev</button>
+                                <button @click.prevent="nextChange()" class="border px-11 py-2.5 text-sm bg-[#2d2d2c] text-white rounded-md mx-1">Next</button>
                             </div>
                         </div>
                     </div>
@@ -118,7 +103,8 @@ export default {
     productData: Object,
     fabric: Object,
     styles: Object,
-    mapper: Object
+    mapper: Object,
+    mapping: Array
   },
   data() {
     return {
@@ -126,10 +112,12 @@ export default {
         activeTab: 'Fabric',
         mainImage: null,
         totalSelectedData: {
-            keyFabric: null
+            keyFabric: null,
+            styles : {
+            }
         },
-        styleDataDetail: null
-        
+        styleDataDetail: null,
+        currentStyleKey : null
     }
   },
   components: {
@@ -144,34 +132,79 @@ export default {
   mounted() {
   },
   methods: {
+    findImage() {
+        const { keyFabric, styles } = this.totalSelectedData;
+
+        const styleKeys = Object.values(styles)
+            .map(style => style.key)
+            .filter(key => key !== undefined);
+
+        const mapping = this.mapping.find(item => {
+            const keysToCompare = [keyFabric.key, ...styleKeys];
+            return JSON.stringify(item.key) === JSON.stringify(keysToCompare);
+        });
+
+        return mapping ? mapping.image : null;
+    },
     getMapperKey() {
         let key = "";
-        if (this.totalSelectedData.keyFabric) {
-            key+="Fabric" + ":" + this.totalSelectedData.keyFabric
+        if (this.totalSelectedData.keyFabric.key) {
+            key+="Fabric" + ":" + this.totalSelectedData.keyFabric.key
         }
-        if(!key) throw Error("Key not found");
+        //console.log(this.totalSelectedData.keyFabric && this.totalSelectedData.keyFabric.name);
+        if(key === "") throw Error("Key not found");
         return key;
     },
-    changeFabric(keyFabric) {
+    changeFabric(fabricData, keyFabric) {
       console.log("Get image match " + keyFabric);
-      this.totalSelectedData.keyFabric = keyFabric;
-      let mapperKey = this.getMapperKey();
-      let mainImage = this.mapper[mapperKey];
-      if (mainImage != this.mainImage) {
+      this.totalSelectedData.keyFabric = { key: keyFabric, name: fabricData.name};
+    //   let mapperKey = this.getMapperKey();
+    //   let mainImage = this.mapper[mapperKey];
+      let mainImage = this.findImage();
+      if (mainImage && mainImage != this.mainImage) {
         this.mainImage = mainImage;
       }
     },
     changeTab(tabName) {
       this.activeTab = tabName;
     },
-    changeStyle(styleData) {
-        console.log(styleData);
+    changeStyle(styleData, styleKey) {
         this.activeTab = "StyleDetail";
         this.styleDataDetail = styleData.Options;
+        this.totalSelectedData.styles[styleKey] = {};
+        this.currentStyleKey = styleKey;
     },
-    chooseStyleDetail(styleName)
-    {
+    chooseStyleDetail(styleName, styleData) {
         this.activeTab = "Style";
+        if(this.currentStyleKey) {
+            this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name};
+            let mainImage = this.findImage();
+            if (mainImage != this.mainImage) {
+                this.mainImage = mainImage;
+            }
+        } else {
+          throw new Error("Incorrect currentStyleKey: " + currentStyleKey);  
+        } 
+    },
+    prevChange() {
+        let tab = ['Fabric', 'Style', 'Size', 'Summary'];
+        let currentIndex = tab.indexOf(this.activeTab);
+
+        if (currentIndex > 0) {
+            this.activeTab = tab[currentIndex - 1];
+        } else {
+            if (this.activeTab === 'StyleDetail') {
+                this.activeTab = 'Style';
+            }
+        }
+    },
+    nextChange() {
+        let tab = ['Fabric', 'Style', 'Size', 'Summary'];
+        let currentIndex = tab.indexOf(this.activeTab);
+        console.log(currentIndex +"__"+ this.activeTab);
+        if (currentIndex >= 0 && currentIndex < tab.length - 1) {
+            this.activeTab = tab[currentIndex + 1];
+        }
     }
 
   }

@@ -18,7 +18,7 @@
                             {{ tab }}
                         </TabItemHeading>
                     </div>
-                    <div class="overflow-y-auto h-auto tab-fabric" :class="activeTab === 'Fabric' ? 'block' : 'hidden'">
+                    <div id="tab-fabric" class="overflow-y-auto h-auto tab-fabric" :class="activeTab === 'Fabric' ? 'block' : 'hidden'">
                         <div>
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Select your fabric</h3>
                         </div>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
 
-                    <div class="overflow-y-auto h-auto tab-style" :class="activeTab === 'Style' ? 'block' : 'hidden'">
+                    <div id="tab-style" class="overflow-y-auto h-auto tab-style" :class="activeTab === 'Style' ? 'block' : 'hidden'">
                         
                         <div>
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Select your style</h3>
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="overflow-y-auto h-auto tab-size" :class="activeTab === 'Size' ? 'block' : 'hidden'">
+                    <div id="tab-size" class="overflow-y-auto h-auto tab-size" :class="activeTab === 'Size' ? 'block' : 'hidden'">
                         
                         <div>
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Select your size</h3>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
 
-                    <div class="overflow-y-auto h-auto tab-summary" :class="activeTab === 'Summary' ? 'block' : 'hidden'">
+                    <div id="tab-summary" class="overflow-y-auto h-auto tab-summary" :class="activeTab === 'Summary' ? 'block' : 'hidden'">
                         <div>
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Summary</h3>
                         </div>
@@ -63,7 +63,7 @@
                             
                         </div>
                     </div>
-                    <div class="overflow-y-auto h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? 'block' : 'hidden'">
+                    <div id="tab-styledetail" class="overflow-y-auto h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? 'block' : 'hidden'">
                         <div class="w-[85%] mx-auto my-1">
                         <div v-for="(styleData, styleName ) in styleDataDetail" :key="styleName" @click.prevent="chooseStyleDetail(styleName, styleData)">
                            <StyleDetailComponent :title="styleData.name" :description="styleData.description"/>
@@ -96,6 +96,7 @@ import TabItemHeading from './TabItemHeading.vue';
 import FabricComponent from './FabricComponent.vue'
 import StyleComponent from './StyleComponent.vue'
 import StyleDetailComponent from './StyleDetailComponent.vue'
+import gsap from 'gsap'
 
 export default {
   name: 'ProductDetailPro',
@@ -103,7 +104,7 @@ export default {
     productData: Object,
     fabric: Object,
     styles: Object,
-    mapping: Array
+    mapping: Object
   },
   data() {
     return {
@@ -127,8 +128,12 @@ export default {
   },
   beforeMount() {
     this.mainImage = this.productData.Image
+    // gsap.to("#tab-fabric", {rotation: 360, x: 100, duration: 1});
+
   },
   mounted() {
+    gsap.fromTo('#tab-fabric', { x: `${1 * 100}%`, duration: 0.5 },{ x: 0 });
+
   },
   methods: {
     findImage() {
@@ -166,15 +171,16 @@ export default {
     },
     changeTab(tabName) {
       this.activeTab = tabName;
+      gsap.fromTo(`#tab-${tabName.toLowerCase()}`, { x: `${1 * 100}%`, duration: 0.5 },{ x: 0 });
     },
     changeStyle(styleData, styleKey) {
-        this.activeTab = "StyleDetail";
+        this.changeTab("StyleDetail");
         this.styleDataDetail = styleData.Options;
         this.totalSelectedData.styles[styleKey] = {};
         this.currentStyleKey = styleKey;
     },
     chooseStyleDetail(styleName, styleData) {
-        this.activeTab = "Style";
+        this.changeTab("Style");
         if(this.currentStyleKey) {
             this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name};
             let mainImage = this.findImage();
@@ -190,10 +196,10 @@ export default {
         let currentIndex = tab.indexOf(this.activeTab);
 
         if (currentIndex > 0) {
-            this.activeTab = tab[currentIndex - 1];
+            this.changeTab(tab[currentIndex - 1]);
         } else {
             if (this.activeTab === 'StyleDetail') {
-                this.activeTab = 'Style';
+                this.changeTab("Style");
             }
         }
     },
@@ -202,10 +208,9 @@ export default {
         let currentIndex = tab.indexOf(this.activeTab);
         console.log(currentIndex +"__"+ this.activeTab);
         if (currentIndex >= 0 && currentIndex < tab.length - 1) {
-            this.activeTab = tab[currentIndex + 1];
+            this.changeTab(tab[currentIndex + 1]);
         }
     }
-
   }
 }
 </script>

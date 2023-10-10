@@ -47,11 +47,9 @@
                         </div>
                     </div>
                     <div id="tab-size" class="overflow-y-auto h-auto tab-size" :class="activeTab === 'Size' ? 'block' : 'hidden'">
-                        
-                        <div>
-                            <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Select your size</h3>
-                        </div>
                         <div class="w-[85%] mx-auto my-1">
+                            <SizeComponent @sizeEmitted="handleSizeEmitted"></SizeComponent>
+
                         </div>
                     </div>
 
@@ -60,7 +58,12 @@
                             <h3 class="text-center font-light text-xl text-gray-900 pt-10 py-2">Summary</h3>
                         </div>
                         <div class="w-[85%] mx-auto my-1">
-                            
+                            <StyleComponent v-if="totalSelectedData.keyFabric" title="Fabric" :selected="totalSelectedData.keyFabric" />
+                            <StyleComponent v-if="totalSelectedData.size" title="Size" :selected="{ name:totalSelectedData.size}" />
+                            <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
+                                <StyleComponent :title="styleData.Info.name" :selected="totalSelectedData.styles[styleName]" />
+                            </div>
+
                         </div>
                     </div>
                     <div id="tab-styledetail" class="overflow-y-auto h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? 'block' : 'hidden'">
@@ -71,6 +74,7 @@
                          
                         </div>
                     </div>
+                   
                     <div class="mt-auto border-t pt-4">
                         <div class="flex justify-between items-center w-[85%] mx-auto mt-auto mb-8">
                             <div>
@@ -96,6 +100,7 @@ import TabItemHeading from './TabItemHeading.vue';
 import FabricComponent from './FabricComponent.vue'
 import StyleComponent from './StyleComponent.vue'
 import StyleDetailComponent from './StyleDetailComponent.vue'
+import SizeComponent from './SizeComponent.vue'
 import gsap from 'gsap'
 
 export default {
@@ -114,7 +119,8 @@ export default {
         totalSelectedData: {
             keyFabric: null,
             styles : {
-            }
+            },
+            size: null
         },
         styleDataDetail: null,
         currentStyleKey : null
@@ -124,7 +130,8 @@ export default {
     FabricComponent,
     TabItemHeading,
     StyleComponent,
-    StyleDetailComponent
+    StyleDetailComponent,
+    SizeComponent
   },
   beforeMount() {
     this.mainImage = this.productData.Image
@@ -210,6 +217,11 @@ export default {
         if (currentIndex >= 0 && currentIndex < tab.length - 1) {
             this.changeTab(tab[currentIndex + 1]);
         }
+    },
+    handleSizeEmitted(size) {
+        this.totalSelectedData.size = size;
+        this.changeTab("Summary");
+
     }
   }
 }

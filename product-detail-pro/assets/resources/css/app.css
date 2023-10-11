@@ -7,3 +7,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#hover-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -75%);
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: gray;
+    color: white;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    z-index: 9999;
+}
+
+
+#image-container:hover > #hover-icon {
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+}

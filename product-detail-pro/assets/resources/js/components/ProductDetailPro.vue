@@ -4,8 +4,19 @@
         <div class="pt-4 h-screen ">
             <div class="md:flex md:h-[calc(100vh-48px)]">
                 <div class="md:flex overflow-y-auto md:h-[calc(100vh-48px)] md:mt-0 mt-10  h-[calc(90vh-48px)] md:w-full">
-                    <div class="md:w-4/6 bg-[#efefef] py-2">
-                            <img class="md:h-[90vh] h-[60vh] mx-auto" :src="mainImage" alt="">
+                    <div class="md:w-4/6 bg-[#efefef] py-2 relative overflow-hidden" id="image-container">
+                        <div id="main-image">
+                            <img
+                                v-for="(image, index) in mainImages"
+                                :key="index"
+                                :src="image"
+                                :class="'image-' + index + ' absolute inset-0 opacity-100 transition-opacity ease-in-out duration-500'"
+                                :style="{ zIndex: index }"
+                                class="md:h-[90vh] h-[60vh] mx-auto"
+                                alt=""
+                            />
+                        </div>
+                        <div id="hover-icon" class="hidden text-white">+</div>
                     </div>
                     <div class="md:w-2/6 flex flex-col ">
                         <div class="text-center flex justify-between text-sm pt-4 transition-transform duration-300 md:static fixed top-0 right-0 left-0  bg-white">
@@ -118,6 +129,7 @@ export default {
         tabs: ['Fabric', 'Style', 'Size', 'Summary'],
         activeTab: 'Fabric',
         mainImage: null,
+        mainImages: [],
         totalSelectedData: {
             keyFabric: null,
             styles : {
@@ -125,7 +137,8 @@ export default {
             size: null
         },
         styleDataDetail: null,
-        currentStyleKey : null
+        currentStyleKey : null,
+        zoomed: false
     }
   },
   components: {
@@ -143,6 +156,36 @@ export default {
   mounted() {
     gsap.fromTo('#tab-fabric', { x: `${1 * 100}%`, duration: 0.5 },{ x: 0 });
 
+
+    const imageContainer = document.getElementById("image-container");
+    const mainImage = document.getElementById("main-image");
+    const hoverIcon = document.getElementById("hover-icon");
+
+    // Add a mousemove event listener to the image
+    imageContainer.addEventListener("mousemove", (event) => {
+        hoverIcon.style.left = event.clientX + "px";
+        hoverIcon.style.top = event.clientY + "px";
+    });
+
+    imageContainer.addEventListener("click", () => {
+        if (this.zoomed) {
+            // If already zoomed in, switch to minus icon
+            hoverIcon.innerHTML = '—';
+            gsap.to(mainImage, {
+            scale: 1, // Zoom out
+            duration: 0.3,
+            });
+        } else {
+            // If not zoomed, switch to plus icon
+            hoverIcon.innerHTML = '+';
+            gsap.to(mainImage, {
+            scale: 1.5, // Zoom in
+            duration: 0.3,
+            });
+        }
+        this.zoomed = !this.zoomed; // Toggle the zoom state
+    });
+
   },
   methods: {
     findImage() {
@@ -151,13 +194,16 @@ export default {
         const styleKeys = Object.values(styles)
             .map(style => style.key)
             .filter(key => key !== undefined);
+        const keysToCompare = [keyFabric.key, ...styleKeys];
+        
+        const imageList = [];
 
-        const mapping = this.mapping.find(item => {
-            const keysToCompare = [keyFabric.key, ...styleKeys];
-            return JSON.stringify(item.key) === JSON.stringify(keysToCompare);
-        });
-
-        return mapping ? mapping.image : null;
+        for (const key of keysToCompare) {
+            if (this.mapping.hasOwnProperty(key)) {
+            imageList.push(this.mapping[key]);
+            }
+        }
+        this.mainImages = imageList;
     },
     getMapperKey() {
         let key = "";
@@ -173,10 +219,8 @@ export default {
       this.totalSelectedData.keyFabric = { key: keyFabric, name: fabricData.name};
     //   let mapperKey = this.getMapperKey();
     //   let mainImage = this.mapper[mapperKey];
-      let mainImage = this.findImage();
-      if (mainImage && mainImage != this.mainImage) {
-        this.mainImage = mainImage;
-      }
+      this.findImage();
+      
     },
     changeTab(tabName) {
       this.activeTab = tabName;
@@ -192,10 +236,7 @@ export default {
         this.changeTab("Style");
         if(this.currentStyleKey) {
             this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name};
-            let mainImage = this.findImage();
-            if (mainImage != this.mainImage) {
-                this.mainImage = mainImage;
-            }
+            this.findImage();
         } else {
           throw new Error("Incorrect currentStyleKey: " + currentStyleKey);  
         } 
@@ -215,7 +256,6 @@ export default {
     nextChange() {
         let tab = ['Fabric', 'Style', 'Size', 'Summary'];
         let currentIndex = tab.indexOf(this.activeTab);
-        console.log(currentIndex +"__"+ this.activeTab);
         if (currentIndex >= 0 && currentIndex < tab.length - 1) {
             this.changeTab(tab[currentIndex + 1]);
         }

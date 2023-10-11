@@ -4,7 +4,7 @@
                             <h3 class="text-center text-2xl font-medium mt-4">Select your Size </h3>
                             <p class="text-center text-gray-500 font-normal text-sm mt-2">Pick the size you usually wear.</p>
                         </div>
-                        <div style="grid-template-columns: 30px repeat(3, 110px);" class="grid grid-cols-3 gap-3 px-4 text-center">
+                        <div style="grid-template-columns: 28% repeat(3, 110px);" class="grid grid-cols-3 gap-3 px-4 text-center">
                             <div></div>
                             <div>
                                 <p class="text-sm text-gray-500 mt-10">Short</p>

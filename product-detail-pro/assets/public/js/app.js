@@ -319,7 +319,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "mx-auto flex justify-center relative"
   }, [_c("img", {
-    staticClass: "h-[100px] w-[97%] rounded-md",
+    staticClass: "h-[90px] w-[97%] rounded-md",
     attrs: {
       src: _vm.imageUrl,
       alt: ""
@@ -373,19 +373,21 @@ var render = function render() {
   }, [_c("section", [_c("div", {
     staticClass: "pt-4 h-screen"
   }, [_c("div", {
-    staticClass: "flex h-[calc(100vh-48px)]"
+    staticClass: "md:flex md:h-[calc(100vh-48px)]"
   }, [_c("div", {
-    staticClass: "w-4/6 bg-[#efefef]"
+    staticClass: "md:flex overflow-y-auto md:h-[calc(100vh-48px)] md:mt-0 mt-10 h-[calc(90vh-48px)] md:w-full"
+  }, [_c("div", {
+    staticClass: "md:w-4/6 bg-[#efefef] py-2"
   }, [_c("img", {
-    staticClass: "h-[90vh] mx-auto",
+    staticClass: "md:h-[90vh] h-[60vh] mx-auto",
     attrs: {
       src: _vm.mainImage,
       alt: ""
     }
   })]), _vm._v(" "), _c("div", {
-    staticClass: "w-2/6 flex flex-col"
+    staticClass: "md:w-2/6 flex flex-col"
   }, [_c("div", {
-    staticClass: "text-center flex justify-between text-sm pt-4 transition-transform duration-300"
+    staticClass: "text-center flex justify-between text-sm pt-4 transition-transform duration-300 md:static fixed top-0 right-0 left-0 bg-white"
   }, _vm._l(_vm.tabs, function (tab, index) {
     return _c("TabItemHeading", {
       key: index,
@@ -396,7 +398,7 @@ var render = function render() {
       on: {
         "tab-change": _vm.changeTab
       }
-    }, [_vm._v("\n                          " + _vm._s(tab) + "\n                      ")]);
+    }, [_vm._v("\n                              " + _vm._s(tab) + "\n                          ")]);
   }), 1), _vm._v(" "), _c("div", {
     staticClass: "overflow-y-auto h-auto tab-fabric",
     "class": _vm.activeTab === "Fabric" ? "block" : "hidden",
@@ -515,9 +517,9 @@ var render = function render() {
       }
     })], 1);
   }), 0)]), _vm._v(" "), _c("div", {
-    staticClass: "mt-auto border-t pt-4"
+    staticClass: "mt-auto border-t pt-4 md:static fixed bottom-0 bg-white w-full"
   }, [_c("div", {
-    staticClass: "flex justify-between items-center w-[85%] mx-auto mt-auto mb-8"
+    staticClass: "flex justify-between items-center w-[85%] mx-auto mt-auto md:pb-0 pb-4"
   }, [_c("div", [_c("p", {
     staticClass: "text-xs text-gray-400"
   }, [_vm._v(" " + _vm._s(_vm.productData.Delivery))]), _vm._v(" "), _c("h3", {
@@ -525,7 +527,7 @@ var render = function render() {
   }, [_vm._v(_vm._s(_vm.productData.ProductName) + " - " + _vm._s(_vm.productData.Price))])]), _vm._v(" "), _c("div", {
     staticClass: "flex"
   }, [_c("button", {
-    staticClass: "border px-11 py-2.5 text-sm rounded-md mx-1",
+    staticClass: "border md:px-11 px-5 md:py-2.5 py-2 text-sm rounded-md mx-1",
     on: {
       click: function click($event) {
         $event.preventDefault();
@@ -533,20 +535,20 @@ var render = function render() {
       }
     }
   }, [_vm._v("Prev")]), _vm._v(" "), _c("button", {
-    staticClass: "border px-11 py-2.5 text-sm bg-[#2d2d2c] text-white rounded-md mx-1",
+    staticClass: "border md:px-11 px-5 md:py-2.5 py-2 text-sm bg-[#2d2d2c] text-white rounded-md mx-1",
     on: {
       click: function click($event) {
         $event.preventDefault();
         return _vm.nextChange();
       }
     }
-  }, [_vm._v("Next")])])])])])])])])]);
+  }, [_vm._v("Next")])])])])])])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("h3", {
-    staticClass: "text-center font-light text-xl text-gray-900 pt-10 py-2"
+    staticClass: "text-center font-light text-xl text-gray-900 pt-8 py-2"
   }, [_vm._v("Select your fabric")])]);
 }, function () {
   var _vm = this,

@@ -4,19 +4,19 @@
         <div class="pt-4 h-screen ">
             <div class="md:flex md:h-[calc(100vh-48px)]">
                 <div class="md:flex overflow-y-auto md:h-[calc(100vh-48px)] md:mt-0 mt-10  h-[calc(90vh-48px)] md:w-full">
-                    <div class="md:w-4/6 bg-[#efefef] py-2 relative overflow-hidden" id="image-container">
+                    <div class="md:w-4/6 bg-[#efefef] cursor-none py-2 md:h-[90vh] h-[60vh] relative overflow-hidden" id="image-container">
                         <div id="main-image">
                             <img
                                 v-for="(image, index) in mainImages"
                                 :key="index"
                                 :src="image"
-                                :class="'image-' + index + ' absolute inset-0 opacity-100 transition-opacity ease-in-out duration-500'"
+                                :class="'image-' + index + ' absolute cursor-none inset-0 opacity-100 transition-opacity  ease-in-out duration-500'"
                                 :style="{ zIndex: index }"
                                 class="md:h-[90vh] h-[60vh] mx-auto"
                                 alt=""
                             />
                         </div>
-                        <div id="hover-icon" class="hidden text-white">+</div>
+                        <div id="hover-icon" class="hidden text-white flex justify-center items-center pt-[3px]">+</div>
                     </div>
                     <div class="md:w-2/6 flex flex-col ">
                         <div class="text-center flex justify-between text-sm pt-4 transition-transform duration-300 md:static fixed top-0 right-0 left-0  bg-white">
@@ -170,16 +170,16 @@ export default {
     imageContainer.addEventListener("click", () => {
         if (this.zoomed) {
             // If already zoomed in, switch to minus icon
-            hoverIcon.innerHTML = '—';
+            hoverIcon.innerHTML = '<p>-</p>';
             gsap.to(mainImage, {
-            scale: 1, // Zoom out
+            scale: 1.5, // Zoom in
             duration: 0.3,
             });
         } else {
             // If not zoomed, switch to plus icon
-            hoverIcon.innerHTML = '+';
+            hoverIcon.innerHTML = '<p>+</p>';
             gsap.to(mainImage, {
-            scale: 1.5, // Zoom in
+            scale: 1, // Zoom out
             duration: 0.3,
             });
         }

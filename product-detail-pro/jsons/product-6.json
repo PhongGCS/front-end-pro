@@ -1,0 +1,81 @@
+{
+    "ProductData": {
+      "ProductName": "Accessories",
+      "Price": "643 USD",
+      "Delivery": "Delivery 2-3 weeks",
+      "Image": "/product-detail-pro/images//MAIN_1.webp"
+    },
+    "Data": {
+      "Tie": {
+        "name": "Tie",
+        "description": "Slanted welted pockets are slightly angled for easier access1."
+      },
+      "BoatTie": {
+        "name": "Boat Tie",
+        "description": "Slanted welted pockets are slightly angled for easier access1."
+      },
+      "ScarfAndBlanket": {
+        "name": "Scarf and Blanket",
+        "description": "Slanted welted pockets are slightly angled for easier access1."
+      },
+      "Glove": {
+        "name": "Glove",
+        "description": "Slanted welted pockets are slightly angled for easier access1."
+      },
+      "Hat": {
+        "name": "Hat",
+        "description": "Slanted welted pockets are slightly angled for easier access1."
+      },
+      "Socks": {
+        "name": "Socks",
+        "description": "Slanted welted pockets are slightly angled for easier access1."
+      }
+    },
+    "Mapping": {
+      "Fabric1": "/product-detail-pro/images/MAIN_1.webp",
+      "Fabric2": "/product-detail-pro/images/MAIN_2.webp",
+      "Fabric3": "/product-detail-pro/images/MAIN_3.webp",
+      "Fabric4": "/product-detail-pro/images/MAIN_4.webp",
+      "Fabric6": "/product-detail-pro/images/MAIN_1.webp",
+      "Fabric7": "/product-detail-pro/images/MAIN_2.webp",
+      "Fabric8": "/product-detail-pro/images/MAIN_3.webp",
+      "Fabric9": "/product-detail-pro/images/MAIN_4.webp",
+      "Fabric10": "/product-detail-pro/images/MAIN_1.webp",
+      "NotchLapel": "/product-detail-pro/images/MAIN_1.webp",
+      "PeakLapel": "/product-detail-pro/images/MAIN_2.webp",
+      "ShawlLapel": "/product-detail-pro/images/MAIN_3.webp",
+      "Button1": "/product-detail-pro/images/MAIN_1.webp",
+      "Button2": "/product-detail-pro/images/MAIN_2.webp",
+      "Button25": "/product-detail-pro/images/MAIN_3.webp",
+      "Button3": "/product-detail-pro/images/MAIN_1.webp",
+      "ButtonsDoubleBreasted4": "/product-detail-pro/images/MAIN_2.webp",
+      "ButtonsDoubleBreasted6": "/product-detail-pro/images/MAIN_3.webp",
+      "BoatShape": "/product-detail-pro/images/MAIN_4.webp",
+      "ChestPocketPatch": "/product-detail-pro/images/MAIN_2.webp",
+      "ChestPocketRoundedPatch": "/product-detail-pro/images/MAIN_3.webp",
+      "ChestPocketPleatedPatch": "/product-detail-pro/images/MAIN_1.webp",
+      "SmallFlap": "/product-detail-pro/images/MAIN_2.webp",
+      "LargeFlap": "/product-detail-pro/images/MAIN_3.webp",
+      "SlantedFlap": "/product-detail-pro/images/MAIN_1.webp",
+      "Jetted": "/product-detail-pro/images/MAIN_2.webp",
+      "SlantedJetted": "/product-detail-pro/images/MAIN_3.webp",
+      "SidePocketPatch": "/product-detail-pro/images/MAIN_1.webp",
+      "SidePocketRoundedPatch": "/product-detail-pro/images/MAIN_2.webp",
+      "SidePocketPleatedPatch": "/product-detail-pro/images/MAIN_3.webp",
+      "TicketPocketYes": "/product-detail-pro/images/MAIN_1.webp",
+      "Novent": "/product-detail-pro/images/MAIN_2.webp",
+      "Singleevent": "/product-detail-pro/images/MAIN_3.webp",
+      "Doublevent": "/product-detail-pro/images/MAIN_1.webp",
+      "KissingButtons3": "/product-detail-pro/images/MAIN_2.webp",
+      "KissingButtons4": "/product-detail-pro/images/MAIN_3.webp",
+      "KissingButtons5": "/product-detail-pro/images/MAIN_1.webp",
+      "FullLined": "/product-detail-pro/images/MAIN_2.webp",
+      "Lined1_2": "/product-detail-pro/images/MAIN_3.webp",
+      "ButterflyLining": "/product-detail-pro/images/MAIN_1.webp",
+      "Unlined": "/product-detail-pro/images/MAIN_2.webp",
+      "Structured": "/product-detail-pro/images/MAIN_3.webp",
+      "Padded": "/product-detail-pro/images/MAIN_1.webp",
+      "Natural": "/product-detail-pro/images/MAIN_2.webp",
+      "Unstructured": "/product-detail-pro/images/MAIN_3.webp"
+    }
+  }

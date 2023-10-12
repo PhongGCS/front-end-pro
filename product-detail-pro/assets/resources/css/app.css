@@ -12,16 +12,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-75%, -75%);
-    font-size: 2em;
+    transform: translate(-100%, -40%);
+    /* font-size: 2em; */
     opacity: 0;
     transition: opacity 0.3s;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: gray;
+    font-size: 25px;
     color: white;
-    font-size: 10px;
     line-height: 20px;
     text-align: center;
     z-index: 9999;

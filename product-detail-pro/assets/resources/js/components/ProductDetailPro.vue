@@ -4,7 +4,7 @@
     <div class="">
             <div class="md:_flex md:_h-[calc(100vh-49px)]">
                 <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-49px)] md:_mt-0 _mt-10  _h-[calc(90vh-48px)] md:_w-full">
-                    <div class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
+                    <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
                         <div id="main-image">
                             <img
                                 v-for="(image, index) in mainImages"
@@ -15,8 +15,18 @@
                                 class="md:_h-[90vh] _h-[60vh] _pt-4 _mx-auto"
                                 alt=""
                             />
+                            <img
+                                v-if="mainImages.length == 0"
+                                :src="mainImage"
+                                :class="' _absolute _cursor-none _inset-0 _opacity-100 _transition-opacity  _ease-in-out _duration-500'"
+                                :style="{ zIndex: 1 }"
+                                class="md:_h-[90vh] _h-[60vh] _pt-4 _mx-auto"
+                                alt=""
+                            />
+
+                            
                         </div>
-                        <div id="hover-icon" class="_hidden _text-white _flex _justify-center _items-center _pt-[3px]">+</div>
+                        <div id="hover-icon" class="_hidden _text-white _flex _justify-center _items-center _pt-[3px]"><p>{{ (zoomed) ? '-' : '+'}}</p></div>
                     </div>
                     <div class="md:_w-2/6 md:_h-[calc(100vh-49px)] _flex _flex-col ">
                         <div class="_text-center _flex _justify-between _text-sm _py-2 _transition-transform _duration-300 md:_static _fixed _top-0 _right-0 _left-0  _bg-white">
@@ -122,7 +132,8 @@ export default {
     productData: Object,
     fabric: Object,
     styles: Object,
-    mapping: Object
+    mapping: Object,
+    productId: Number
   },
   data() {
     return {
@@ -170,14 +181,18 @@ export default {
     imageContainer.addEventListener("click", () => {
         if (this.zoomed) {
             // If already zoomed in, switch to minus icon
-            hoverIcon.innerHTML = '<p>-</p>';
+            //setTimeout(() => {
+            //    hoverIcon.innerHTML = '<p>-</p>';
+            //}, 0)
             gsap.to(mainImage, {
             scale: 1.5, // Zoom in
             duration: 0.3,
             });
         } else {
             // If not zoomed, switch to plus icon
-            hoverIcon.innerHTML = '<p>+</p>';
+            //setTimeout(() => {
+            //    hoverIcon.innerHTML = '<p>+</p>';
+            //}, 100)
             gsap.to(mainImage, {
             scale: 1, // Zoom out
             duration: 0.3,
@@ -185,6 +200,8 @@ export default {
         }
         this.zoomed = !this.zoomed; // Toggle the zoom state
     });
+
+    
 
 
   },
@@ -218,20 +235,9 @@ dropDown() {
         }
         this.mainImages = imageList;
     },
-    getMapperKey() {
-        let key = "";
-        if (this.totalSelectedData.keyFabric.key) {
-            key+="Fabric" + ":" + this.totalSelectedData.keyFabric.key
-        }
-        //console.log(this.totalSelectedData.keyFabric && this.totalSelectedData.keyFabric.name);
-        if(key === "") throw Error("Key not found");
-        return key;
-    },
     changeFabric(fabricData, keyFabric) {
       console.log("Get image match " + keyFabric);
       this.totalSelectedData.keyFabric = { key: keyFabric, name: fabricData.name};
-    //   let mapperKey = this.getMapperKey();
-    //   let mainImage = this.mapper[mapperKey];
       this.findImage();
       
     },
@@ -283,6 +289,15 @@ dropDown() {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
+.fullscreen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999; /* Adjust the z-index as needed */
+  width: 100% !important;
+  height: 100% !important;
+}
 </style>

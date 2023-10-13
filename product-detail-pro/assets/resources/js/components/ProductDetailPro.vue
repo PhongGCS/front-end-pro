@@ -1,10 +1,39 @@
 <template>
   <div class="product-detail-pro">
+    <header>
+    <div class="flex items-center py-2 w-full">
+        <button class="my-auto ml-3 w-1/3 ">
+            <div class="w-[20px] m-1.5 h-[1.5px] bg-gray-700"></div>
+            <div class="w-[20px] m-1.5 h-[1.5px] bg-gray-700"></div>
+        </button>
+        <div class=" w-1/3 flex justify-center">
+            <p class="text-xl font-medium text-black-300">SUITSUPLLY</p>
+        </div>
+        <div class="my-auto flex justify-end items-center w-1/3 mr-3">
+            <div class="m-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="gray" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                </svg>
+            </div>
+            <div class="m-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" fill="gray" class="bi bi-bookmark" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                </svg>
+            </div>
+            <div class="m-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="gray" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    </header> 
      <section>
-        <div class="pt-4 h-screen ">
-            <div class="md:flex md:h-[calc(100vh-48px)]">
-                <div class="md:flex overflow-y-auto md:h-[calc(100vh-48px)] md:mt-0 mt-10  h-[calc(90vh-48px)] md:w-full">
-                    <div class="md:w-4/6 bg-[#efefef] cursor-none py-2 md:h-[90vh] h-[60vh] relative overflow-hidden" id="image-container">
+    <div class="">
+            <div class="md:flex md:h-[calc(100vh-49px)]">
+                <div class="md:flex overflow-y-auto md:h-[calc(100vh-49px)] md:mt-0 mt-10  h-[calc(90vh-48px)] md:w-full">
+                    <div class="md:w-4/6 bg-[#efefef] cursor-none md:h-[calc(100vh-49px)] h-[60vh] relative overflow-hidden" id="image-container">
                         <div id="main-image">
                             <img
                                 v-for="(image, index) in mainImages"
@@ -12,14 +41,14 @@
                                 :src="image"
                                 :class="'image-' + index + ' absolute cursor-none inset-0 opacity-100 transition-opacity  ease-in-out duration-500'"
                                 :style="{ zIndex: index }"
-                                class="md:h-[90vh] h-[60vh] mx-auto"
+                                class="md:h-[90vh] h-[60vh] pt-4 mx-auto"
                                 alt=""
                             />
                         </div>
                         <div id="hover-icon" class="hidden text-white flex justify-center items-center pt-[3px]">+</div>
                     </div>
-                    <div class="md:w-2/6 flex flex-col ">
-                        <div class="text-center flex justify-between text-sm pt-4 transition-transform duration-300 md:static fixed top-0 right-0 left-0  bg-white">
+                    <div class="md:w-2/6 md:h-[calc(100vh-49px)] flex flex-col ">
+                        <div class="text-center flex justify-between text-sm py-2 transition-transform duration-300 md:static fixed top-0 right-0 left-0  bg-white">
                             <TabItemHeading
                                 v-for="(tab, index) in tabs"
                                 :key="index"
@@ -87,7 +116,7 @@
                             </div>
                         </div>
                     
-                        <div class="mt-auto border-t pt-4 md:static fixed bottom-0 bg-white w-full">
+                        <div class="mt-auto border-t py-4 md:static fixed bottom-0 bg-white w-full">
                             <div class="flex justify-between items-center w-[85%] mx-auto mt-auto md:pb-0 pb-4">
                                 <div>
                                     <p class="text-xs text-gray-400"> {{productData.Delivery}}</p>
@@ -103,7 +132,7 @@
                     </div>
             </div>
             </div>
-        </div>
+    </div>
     </section>
   </div>
 </template>

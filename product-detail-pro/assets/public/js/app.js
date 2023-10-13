@@ -409,14 +409,61 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "product-detail-pro"
-  }, [_c("section", [_c("div", {
-    staticClass: "pt-4 h-screen"
+  }, [_c("header", [_c("div", {
+    staticClass: "flex items-center py-2 w-full"
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "my-auto flex justify-end items-center w-1/3 mr-3"
   }, [_c("div", {
-    staticClass: "md:flex md:h-[calc(100vh-48px)]"
+    staticClass: "m-1"
+  }, [_c("svg", {
+    staticClass: "bi bi-person",
+    attrs: {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "30",
+      height: "25",
+      fill: "gray",
+      viewBox: "0 0 16 16"
+    }
+  }, [_c("path", {
+    attrs: {
+      d: "M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "m-1"
+  }, [_c("svg", {
+    staticClass: "bi bi-bookmark",
+    attrs: {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "23",
+      height: "20",
+      fill: "gray",
+      viewBox: "0 0 16 16"
+    }
+  }, [_c("path", {
+    attrs: {
+      d: "M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"
+    }
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "m-1"
+  }, [_c("svg", {
+    staticClass: "bi bi-bag",
+    attrs: {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "25",
+      height: "20",
+      fill: "gray",
+      viewBox: "0 0 16 16"
+    }
+  }, [_c("path", {
+    attrs: {
+      d: "M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+    }
+  })])])])])]), _vm._v(" "), _c("section", [_c("div", {}, [_c("div", {
+    staticClass: "md:flex md:h-[calc(100vh-49px)]"
   }, [_c("div", {
-    staticClass: "md:flex overflow-y-auto md:h-[calc(100vh-48px)] md:mt-0 mt-10 h-[calc(90vh-48px)] md:w-full"
+    staticClass: "md:flex overflow-y-auto md:h-[calc(100vh-49px)] md:mt-0 mt-10 h-[calc(90vh-48px)] md:w-full"
   }, [_c("div", {
-    staticClass: "md:w-4/6 bg-[#efefef] cursor-none py-2 md:h-[90vh] h-[60vh] relative overflow-hidden",
+    staticClass: "md:w-4/6 bg-[#efefef] cursor-none md:h-[calc(100vh-49px)] h-[60vh] relative overflow-hidden",
     attrs: {
       id: "image-container"
     }
@@ -427,7 +474,7 @@ var render = function render() {
   }, _vm._l(_vm.mainImages, function (image, index) {
     return _c("img", {
       key: index,
-      staticClass: "md:h-[90vh] h-[60vh] mx-auto",
+      staticClass: "md:h-[90vh] h-[60vh] pt-4 mx-auto",
       "class": "image-" + index + " absolute cursor-none inset-0 opacity-100 transition-opacity  ease-in-out duration-500",
       style: {
         zIndex: index
@@ -443,9 +490,9 @@ var render = function render() {
       id: "hover-icon"
     }
   }, [_vm._v("+")])]), _vm._v(" "), _c("div", {
-    staticClass: "md:w-2/6 flex flex-col"
+    staticClass: "md:w-2/6 md:h-[calc(100vh-49px)] flex flex-col"
   }, [_c("div", {
-    staticClass: "text-center flex justify-between text-sm pt-4 transition-transform duration-300 md:static fixed top-0 right-0 left-0 bg-white"
+    staticClass: "text-center flex justify-between text-sm py-2 transition-transform duration-300 md:static fixed top-0 right-0 left-0 bg-white"
   }, _vm._l(_vm.tabs, function (tab, index) {
     return _c("TabItemHeading", {
       key: index,
@@ -463,7 +510,7 @@ var render = function render() {
     attrs: {
       id: "tab-fabric"
     }
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
+  }, [_vm._m(2), _vm._v(" "), _c("div", {
     staticClass: "w-[85%] mx-auto my-1"
   }, [_c("div", [_vm.fabric.Info.Style === "FabricComponent" ? _c("div", _vm._l(_vm.fabric.Options, function (fabricData, fabricName) {
     return _c("div", {
@@ -487,7 +534,7 @@ var render = function render() {
     attrs: {
       id: "tab-style"
     }
-  }, [_vm._m(1), _vm._v(" "), _c("div", {
+  }, [_vm._m(3), _vm._v(" "), _c("div", {
     staticClass: "w-[85%] mx-auto my-1"
   }, [_c("div", _vm._l(_vm.styles, function (styleData, styleName) {
     return _c("div", {
@@ -522,7 +569,7 @@ var render = function render() {
     attrs: {
       id: "tab-summary"
     }
-  }, [_vm._m(2), _vm._v(" "), _c("div", {
+  }, [_vm._m(4), _vm._v(" "), _c("div", {
     staticClass: "w-[85%] mx-auto my-1"
   }, [_vm.totalSelectedData.keyFabric ? _c("StyleComponent", {
     attrs: {
@@ -575,7 +622,7 @@ var render = function render() {
       }
     })], 1);
   }), 0)]), _vm._v(" "), _c("div", {
-    staticClass: "mt-auto border-t pt-4 md:static fixed bottom-0 bg-white w-full"
+    staticClass: "mt-auto border-t py-4 md:static fixed bottom-0 bg-white w-full"
   }, [_c("div", {
     staticClass: "flex justify-between items-center w-[85%] mx-auto mt-auto md:pb-0 pb-4"
   }, [_c("div", [_c("p", {
@@ -603,6 +650,24 @@ var render = function render() {
   }, [_vm._v("Next")])])])])])])])])])]);
 };
 var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("button", {
+    staticClass: "my-auto ml-3 w-1/3"
+  }, [_c("div", {
+    staticClass: "w-[20px] m-1.5 h-[1.5px] bg-gray-700"
+  }), _vm._v(" "), _c("div", {
+    staticClass: "w-[20px] m-1.5 h-[1.5px] bg-gray-700"
+  })]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "w-1/3 flex justify-center"
+  }, [_c("p", {
+    staticClass: "text-xl font-medium text-black-300"
+  }, [_vm._v("SUITSUPLLY")])]);
+}, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("h3", {

@@ -1,66 +1,66 @@
 <template>
     <section>
                         <div>
-                            <h3 class="text-center text-2xl font-medium mt-4">Select your Size </h3>
-                            <p class="text-center text-gray-500 font-normal text-sm mt-2">Pick the size you usually wear.</p>
+                            <h3 class="_text-center _text-2xl _font-medium _mt-4">Select your Size </h3>
+                            <p class="_text-center _text-gray-500 _font-normal _text-sm _mt-2">Pick the size you usually wear.</p>
                         </div>
-                        <div style="grid-template-columns: 28% repeat(3, 110px);" class="grid grid-cols-3 gap-3 px-4 text-center">
+                        <div style="grid-template-columns: 28% repeat(3, 110px);" class="_grid _grid-cols-3 _gap-3 _px-4 _text-center">
                             <div></div>
                             <div>
-                                <p class="text-sm text-gray-500 mt-10">Short</p>
-                                <p class="text-xs font-light text-gray-400"> &lt; 5.5"</p>
+                                <p class="_text-sm _text-gray-500 _mt-10">Short</p>
+                                <p class="_text-xs _font-light _text-gray-400"> &lt; 5.5"</p>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-500 mt-10">Regular</p>
-                                <p class="text-xs font-light text-gray-400">5.5 - 6.1"</p>
+                                <p class="_text-sm _text-gray-500 _mt-10">Regular</p>
+                                <p class="_text-xs _font-light _text-gray-400">5.5 - 6.1"</p>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-500 mt-10">Long</p>
-                                <p class="text-xs font-light text-gray-400"> > 6.1"</p>
+                                <p class="_text-sm _text-gray-500 _mt-10">Long</p>
+                                <p class="_text-xs _font-light _text-gray-400"> > 6.1"</p>
                             </div>
-                            <div class="flex items-center">
-                                <p class="text-gray-500 font-normal text-sm">XXXS</p>
+                            <div class="_flex _items-center">
+                                <p class="_text-gray-500 _font-normal _text-sm">XXXS</p>
                             </div>
                             <div></div>
                             <div>
-                                <button class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">30</button>
+                                <button class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">30</button>
                             </div>
                             <div></div>
-                            <div class="flex items-center">
-                                <p class="text-gray-500 font-normal text-sm">XXS</p>
+                            <div class="_flex _items-center">
+                                <p class="_text-gray-500 _font-normal _text-sm">XXS</p>
                             </div>
                             <div>
-                                <button @click="emitNumber(31)" class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">31</button>
+                                <button @click="emitNumber(31)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">31</button>
                             </div>
                             <div>
-                                <button @click="emitNumber(32)" class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">32</button>
+                                <button @click="emitNumber(32)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">32</button>
                             </div>
                             <div>
-                                <button @click="emitNumber(33)" class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">33</button>
+                                <button @click="emitNumber(33)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">33</button>
                             </div>
-                            <div class="flex items-center">
-                                <p class="text-gray-500 font-normal text-sm">XS</p>
-                            </div>
-                            <div>
-                                <button @click="emitNumber(34)" class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">34</button>
+                            <div class="_flex _items-center">
+                                <p class="_text-gray-500 _font-normal _text-sm">XS</p>
                             </div>
                             <div>
-                                <button @click="emitNumber(35)" class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">35</button>
+                                <button @click="emitNumber(34)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">34</button>
                             </div>
                             <div>
-                                <button @click="emitNumber(36)" class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">36</button>
-                            </div>
-                            <div class="flex items-center">
-                                <p class="text-gray-500 font-normal text-sm">S</p>
+                                <button @click="emitNumber(35)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">35</button>
                             </div>
                             <div>
-                                <button @click="emitNumber(37)"  class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">36</button>
+                                <button @click="emitNumber(36)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">36</button>
+                            </div>
+                            <div class="_flex _items-center">
+                                <p class="_text-gray-500 _font-normal _text-sm">S</p>
                             </div>
                             <div>
-                                <button @click="emitNumber(38)"  class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">37</button>
+                                <button @click="emitNumber(37)"  class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">36</button>
                             </div>
                             <div>
-                                <button @click="emitNumber(39)"  class="border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2">38</button>
+                                <button @click="emitNumber(38)"  class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">37</button>
+                            </div>
+                            <div>
+                                <button @click="emitNumber(39)"  class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">38</button>
                             </div>
 
                         </div>

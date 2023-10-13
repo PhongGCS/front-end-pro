@@ -1,8 +1,8 @@
 <template>
   <a
     @click="changeTab"
-    :class="['flex-grow', { 'border-b border-black': isActive }]"
-    class="py-2 px-6 cursor-pointer"
+    :class="['_flex-grow', { '_border-b _border-black': isActive }]"
+    class="_py-2 _px-6 _cursor-pointer"
   >
     <slot></slot>
   </a>

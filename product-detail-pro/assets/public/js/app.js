@@ -364,17 +364,17 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "group w-full border pt-1.5 rounded-md focus:border-black hover:border-gray-300 my-2"
+    staticClass: "_group _w-full _border _pt-1.5 _rounded-md focus:_border-black hover:_border-gray-300 _my-2"
   }, [_c("div", {
-    staticClass: "mx-auto flex justify-center relative"
+    staticClass: "_mx-auto _flex _justify-center _relative"
   }, [_c("img", {
-    staticClass: "h-[90px] w-[97%] rounded-md",
+    staticClass: "_h-[90px] _w-[97%] _rounded-md",
     attrs: {
       src: _vm.imageUrl,
       alt: ""
     }
   }), _vm._v(" "), _c("div", {
-    staticClass: "absolute hidden group-hover:block group-focus:block top-2 right-4"
+    staticClass: "_absolute _hidden group-hover:_block group-focus:_block _top-2 _right-4"
   }, [_c("svg", {
     staticClass: "bi bi-info-circle-fill",
     attrs: {
@@ -389,11 +389,11 @@ var render = function render() {
       d: "M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
     }
   })])])]), _vm._v(" "), _c("div", {
-    staticClass: "flex justify-between px-4 py-2 text-sm"
+    staticClass: "_flex _justify-between _px-4 _py-2 _text-sm"
   }, [_c("h3", {
-    staticClass: "group-focus:font-medium"
+    staticClass: "group-focus:_font-medium"
   }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _vm.price ? _c("h3", [_c("span", {
-    staticClass: "group-focus:font-medium"
+    staticClass: "group-focus:_font-medium"
   }, [_vm._v("$" + _vm._s(_vm.price))]), _vm._v(" USD")]) : _vm._e()])]);
 };
 var staticRenderFns = [];
@@ -420,11 +420,11 @@ var render = function render() {
   return _c("div", {
     staticClass: "product-detail-pro"
   }, [_c("section", [_c("div", {}, [_c("div", {
-    staticClass: "md:flex md:h-[calc(100vh-49px)]"
+    staticClass: "md:_flex md:_h-[calc(100vh-49px)]"
   }, [_c("div", {
-    staticClass: "md:flex overflow-y-auto md:h-[calc(100vh-49px)] md:mt-0 mt-10 h-[calc(90vh-48px)] md:w-full"
+    staticClass: "md:_flex _overflow-y-auto md:_h-[calc(100vh-49px)] md:_mt-0 _mt-10 _h-[calc(90vh-48px)] md:_w-full"
   }, [_c("div", {
-    staticClass: "md:w-4/6 bg-[#efefef] cursor-none md:h-[calc(100vh-49px)] h-[60vh] relative overflow-hidden",
+    staticClass: "md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden",
     attrs: {
       id: "image-container"
     }
@@ -435,8 +435,8 @@ var render = function render() {
   }, _vm._l(_vm.mainImages, function (image, index) {
     return _c("img", {
       key: index,
-      staticClass: "md:h-[90vh] h-[60vh] pt-4 mx-auto",
-      "class": "image-" + index + " absolute cursor-none inset-0 opacity-100 transition-opacity  ease-in-out duration-500",
+      staticClass: "md:_h-[90vh] _h-[60vh] _pt-4 _mx-auto",
+      "class": "image-" + index + " _absolute _cursor-none _inset-0 _opacity-100 _transition-opacity  _ease-in-out _duration-500",
       style: {
         zIndex: index
       },
@@ -446,14 +446,14 @@ var render = function render() {
       }
     });
   }), 0), _vm._v(" "), _c("div", {
-    staticClass: "hidden text-white flex justify-center items-center pt-[3px]",
+    staticClass: "_hidden _text-white _flex _justify-center _items-center _pt-[3px]",
     attrs: {
       id: "hover-icon"
     }
   }, [_vm._v("+")])]), _vm._v(" "), _c("div", {
-    staticClass: "md:w-2/6 md:h-[calc(100vh-49px)] flex flex-col"
+    staticClass: "md:_w-2/6 md:_h-[calc(100vh-49px)] _flex _flex-col"
   }, [_c("div", {
-    staticClass: "text-center flex justify-between text-sm py-2 transition-transform duration-300 md:static fixed top-0 right-0 left-0 bg-white"
+    staticClass: "_text-center _flex _justify-between _text-sm _py-2 _transition-transform _duration-300 md:_static _fixed _top-0 _right-0 _left-0 _bg-white"
   }, _vm._l(_vm.tabs, function (tab, index) {
     return _c("TabItemHeading", {
       key: index,
@@ -466,13 +466,13 @@ var render = function render() {
       }
     }, [_vm._v("\n                              " + _vm._s(tab) + "\n                          ")]);
   }), 1), _vm._v(" "), _c("div", {
-    staticClass: "overflow-y-auto h-auto tab-fabric",
-    "class": _vm.activeTab === "Fabric" ? "block" : "hidden",
+    staticClass: "_overflow-y-auto _h-auto tab-fabric",
+    "class": _vm.activeTab === "Fabric" ? "_block" : "_hidden",
     attrs: {
       id: "tab-fabric"
     }
   }, [_vm._m(0), _vm._v(" "), _c("div", {
-    staticClass: "w-[85%] mx-auto my-1"
+    staticClass: "_w-[85%] _mx-auto _my-1"
   }, [_c("div", [_vm.fabric.Info.Style === "FabricComponent" ? _c("div", _vm._l(_vm.fabric.Options, function (fabricData, fabricName) {
     return _c("div", {
       key: fabricName,
@@ -490,13 +490,13 @@ var render = function render() {
       }
     })], 1);
   }), 0) : _vm._e()])])]), _vm._v(" "), _c("div", {
-    staticClass: "overflow-y-auto h-auto tab-style",
-    "class": _vm.activeTab === "Style" ? "block" : "hidden",
+    staticClass: "_overflow-y-auto _h-auto tab-style",
+    "class": _vm.activeTab === "Style" ? "_block" : "_hidden",
     attrs: {
       id: "tab-style"
     }
   }, [_vm._m(1), _vm._v(" "), _c("div", {
-    staticClass: "w-[85%] mx-auto my-1"
+    staticClass: "_w-[85%] _mx-auto _my-1"
   }, [_c("div", _vm._l(_vm.styles, function (styleData, styleName) {
     return _c("div", {
       key: styleName,
@@ -513,25 +513,25 @@ var render = function render() {
       }
     })], 1);
   }), 0)])]), _vm._v(" "), _c("div", {
-    staticClass: "overflow-y-auto h-auto tab-size",
-    "class": _vm.activeTab === "Size" ? "block" : "hidden",
+    staticClass: "_overflow-y-auto _h-auto tab-size",
+    "class": _vm.activeTab === "Size" ? "_block" : "_hidden",
     attrs: {
       id: "tab-size"
     }
   }, [_c("div", {
-    staticClass: "w-[85%] mx-auto my-1"
+    staticClass: "_w-[85%] _mx-auto _my-1"
   }, [_c("SizeComponent", {
     on: {
       sizeEmitted: _vm.handleSizeEmitted
     }
   })], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "overflow-y-auto h-auto tab-summary",
-    "class": _vm.activeTab === "Summary" ? "block" : "hidden",
+    staticClass: "_overflow-y-auto _h-auto tab-summary",
+    "class": _vm.activeTab === "Summary" ? "_block" : "_hidden",
     attrs: {
       id: "tab-summary"
     }
   }, [_vm._m(2), _vm._v(" "), _c("div", {
-    staticClass: "w-[85%] mx-auto my-1"
+    staticClass: "_w-[85%] _mx-auto _my-1"
   }, [_vm.totalSelectedData.keyFabric ? _c("StyleComponent", {
     attrs: {
       title: "Fabric",
@@ -560,13 +560,13 @@ var render = function render() {
       }
     })], 1);
   })], 2)]), _vm._v(" "), _c("div", {
-    staticClass: "overflow-y-auto h-auto tab-style-detail",
-    "class": _vm.activeTab === "StyleDetail" ? "block" : "hidden",
+    staticClass: "_overflow-y-auto _h-auto tab-style-detail",
+    "class": _vm.activeTab === "StyleDetail" ? "_block" : "_hidden",
     attrs: {
       id: "tab-styledetail"
     }
   }, [_c("div", {
-    staticClass: "w-[85%] mx-auto my-1"
+    staticClass: "_w-[85%] _mx-auto _my-1"
   }, _vm._l(_vm.styleDataDetail, function (styleData, styleName) {
     return _c("div", {
       key: styleName,
@@ -583,17 +583,17 @@ var render = function render() {
       }
     })], 1);
   }), 0)]), _vm._v(" "), _c("div", {
-    staticClass: "mt-auto border-t py-4 md:static fixed bottom-0 bg-white w-full"
+    staticClass: "_mt-auto _border-t _py-4 md:_static _fixed _bottom-0 _bg-white _w-full"
   }, [_c("div", {
-    staticClass: "flex justify-between items-center w-[85%] mx-auto mt-auto md:pb-0 pb-4"
+    staticClass: "_flex _justify-between _items-center _w-[85%] _mx-auto _mt-auto md:_pb-0 _pb-4"
   }, [_c("div", [_c("p", {
-    staticClass: "text-xs text-gray-400"
+    staticClass: "_text-xs _text-gray-400"
   }, [_vm._v(" " + _vm._s(_vm.productData.Delivery))]), _vm._v(" "), _c("h3", {
-    staticClass: "text-sm text-gray-800 font-light"
+    staticClass: "_text-sm _text-gray-800 _font-light"
   }, [_vm._v(_vm._s(_vm.productData.ProductName) + " - " + _vm._s(_vm.productData.Price))])]), _vm._v(" "), _c("div", {
-    staticClass: "flex"
+    staticClass: "_flex"
   }, [_c("button", {
-    staticClass: "border md:px-11 px-5 md:py-2.5 py-2 text-sm rounded-md mx-1",
+    staticClass: "_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _rounded-md _mx-1",
     on: {
       click: function click($event) {
         $event.preventDefault();
@@ -601,7 +601,7 @@ var render = function render() {
       }
     }
   }, [_vm._v("Prev")]), _vm._v(" "), _c("button", {
-    staticClass: "border md:px-11 px-5 md:py-2.5 py-2 text-sm bg-[#2d2d2c] text-white rounded-md mx-1",
+    staticClass: "_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1",
     on: {
       click: function click($event) {
         $event.preventDefault();
@@ -614,19 +614,19 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("h3", {
-    staticClass: "text-center font-light text-xl text-gray-900 pt-8 py-2"
+    staticClass: "_text-center _font-light _text-xl _text-gray-900 _pt-8 _py-2"
   }, [_vm._v("Select your fabric")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("h3", {
-    staticClass: "text-center font-light text-xl text-gray-900 pt-10 py-2"
+    staticClass: "_text-center _font-light _text-xl _text-gray-900 _pt-10 _py-2"
   }, [_vm._v("Select your style")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("h3", {
-    staticClass: "text-center font-light text-xl text-gray-900 pt-10 py-2"
+    staticClass: "_text-center _font-light _text-xl _text-gray-900 _pt-10 _py-2"
   }, [_vm._v("Summary")])]);
 }];
 render._withStripped = true;
@@ -650,68 +650,68 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("section", [_vm._m(0), _vm._v(" "), _c("div", {
-    staticClass: "grid grid-cols-3 gap-3 px-4 text-center",
+    staticClass: "_grid _grid-cols-3 _gap-3 _px-4 _text-center",
     staticStyle: {
       "grid-template-columns": "28% repeat(3, 110px)"
     }
   }, [_c("div"), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("div"), _vm._v(" "), _vm._m(5), _vm._v(" "), _c("div"), _vm._v(" "), _vm._m(6), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(31);
       }
     }
   }, [_vm._v("31")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(32);
       }
     }
   }, [_vm._v("32")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(33);
       }
     }
   }, [_vm._v("33")])]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(34);
       }
     }
   }, [_vm._v("34")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(35);
       }
     }
   }, [_vm._v("35")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(36);
       }
     }
   }, [_vm._v("36")])]), _vm._v(" "), _vm._m(8), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(37);
       }
     }
   }, [_vm._v("36")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(38);
       }
     }
   }, [_vm._v("37")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2",
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2",
     on: {
       click: function click($event) {
         return _vm.emitNumber(39);
@@ -723,71 +723,71 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("h3", {
-    staticClass: "text-center text-2xl font-medium mt-4"
+    staticClass: "_text-center _text-2xl _font-medium _mt-4"
   }, [_vm._v("Select your Size ")]), _vm._v(" "), _c("p", {
-    staticClass: "text-center text-gray-500 font-normal text-sm mt-2"
+    staticClass: "_text-center _text-gray-500 _font-normal _text-sm _mt-2"
   }, [_vm._v("Pick the size you usually wear.")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("p", {
-    staticClass: "text-sm text-gray-500 mt-10"
+    staticClass: "_text-sm _text-gray-500 _mt-10"
   }, [_vm._v("Short")]), _vm._v(" "), _c("p", {
-    staticClass: "text-xs font-light text-gray-400"
+    staticClass: "_text-xs _font-light _text-gray-400"
   }, [_vm._v(' < 5.5"')])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("p", {
-    staticClass: "text-sm text-gray-500 mt-10"
+    staticClass: "_text-sm _text-gray-500 _mt-10"
   }, [_vm._v("Regular")]), _vm._v(" "), _c("p", {
-    staticClass: "text-xs font-light text-gray-400"
+    staticClass: "_text-xs _font-light _text-gray-400"
   }, [_vm._v('5.5 - 6.1"')])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("p", {
-    staticClass: "text-sm text-gray-500 mt-10"
+    staticClass: "_text-sm _text-gray-500 _mt-10"
   }, [_vm._v("Long")]), _vm._v(" "), _c("p", {
-    staticClass: "text-xs font-light text-gray-400"
+    staticClass: "_text-xs _font-light _text-gray-400"
   }, [_vm._v(' > 6.1"')])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "flex items-center"
+    staticClass: "_flex _items-center"
   }, [_c("p", {
-    staticClass: "text-gray-500 font-normal text-sm"
+    staticClass: "_text-gray-500 _font-normal _text-sm"
   }, [_vm._v("XXXS")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 text-gray-500 rounded-md px-12 py-2"
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2"
   }, [_vm._v("30")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "flex items-center"
+    staticClass: "_flex _items-center"
   }, [_c("p", {
-    staticClass: "text-gray-500 font-normal text-sm"
+    staticClass: "_text-gray-500 _font-normal _text-sm"
   }, [_vm._v("XXS")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "flex items-center"
+    staticClass: "_flex _items-center"
   }, [_c("p", {
-    staticClass: "text-gray-500 font-normal text-sm"
+    staticClass: "_text-gray-500 _font-normal _text-sm"
   }, [_vm._v("XS")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "flex items-center"
+    staticClass: "_flex _items-center"
   }, [_c("p", {
-    staticClass: "text-gray-500 font-normal text-sm"
+    staticClass: "_text-gray-500 _font-normal _text-sm"
   }, [_vm._v("S")])]);
 }];
 render._withStripped = true;
@@ -811,11 +811,11 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "w-full flex justify-center pt-4"
+    staticClass: "_w-full _flex _justify-center _pt-4"
   }, [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 rounded-md text-sm w-[85%] flex justify-between py-5 font-light px-4"
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 _rounded-md _text-sm w-[85%] _flex _justify-between _py-5 _font-light _px-4 _w-full"
   }, [_vm._v(_vm._s(_vm.title) + " "), _c("span", {
-    staticClass: "text-gray-500 text-end"
+    staticClass: "_text-gray-500 text-end"
   }, [_vm._v(_vm._s(_vm.selected ? _vm.selected.name : ""))])])]);
 };
 var staticRenderFns = [];
@@ -840,15 +840,15 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "w-full flex justify-center items-center pt-4"
+    staticClass: "_w-full _flex _justify-center _items-center _pt-4"
   }, [_c("button", {
-    staticClass: "border border-gray-300 hover:border-gray-400 focus:border-black rounded-md text-sm w-[85%] flex justify-between py-7 font-light px-6"
+    staticClass: "_border _border-gray-300 hover:_border-gray-400 focus:_border-black _rounded-md _text-sm _w-[85%] _flex _justify-between _py-7 _font-light _px-6"
   }, [_c("span", {
-    staticClass: "text-start text-sm font-light w-2/3"
+    staticClass: "_text-start _text-sm _font-light _w-2/3"
   }, [_c("span", {
-    staticClass: "text-lg font-bold"
+    staticClass: "_text-lg _font-bold"
   }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c("br"), _vm._v(_vm._s(_vm.description))]), _c("img", {
-    staticClass: "w-1/4",
+    staticClass: "_w-1/4",
     attrs: {
       src: "https://cdn.suitsupply.com/image/upload/b_rgb:ffffff,c_fit,f_auto,h_800,q_auto:good,w_800/custommade/thumbs2/fits/coat/vicenza",
       alt: ""
@@ -877,9 +877,9 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("a", {
-    staticClass: "py-2 px-6 cursor-pointer",
-    "class": ["flex-grow", {
-      "border-b border-black": _vm.isActive
+    staticClass: "_py-2 _px-6 _cursor-pointer",
+    "class": ["_flex-grow", {
+      "_border-b _border-black": _vm.isActive
     }],
     on: {
       click: _vm.changeTab

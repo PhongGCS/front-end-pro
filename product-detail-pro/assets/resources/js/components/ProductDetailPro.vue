@@ -3,9 +3,9 @@
      <section>
     <div class="">
             <div class="md:_flex md:_h-[calc(100vh-49px)]">
-                <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-49px)] md:_mt-0 _mt-10  _h-[calc(90vh-48px)] md:_w-full">
+                <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full">
                     <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
-                        <div id="main-image">
+                        <div id="main-image">                            
                             <img
                                 v-for="(image, index) in mainImages"
                                 :key="index"
@@ -35,7 +35,7 @@
                                 :key="index"
                                 :tab-name="tab"
                                 :active-tab="activeTab"
-                                @tab-change="changeTab"
+                                @tab-change="false"
                                 >
                                 {{ tab }}
                             </TabItemHeading>
@@ -61,9 +61,9 @@
                                 <h3 class="_text-center _font-light _text-xl _text-gray-900 _pt-10 _py-2">Select your style</h3>
                             </div>
                             <div class="_w-[85%] _mx-auto _my-1">
-                                <div>
+                                <div v-if="isChangeStyle">
                                     <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
-                                        <StyleComponent :title="styleData.Info.name" :selected="totalSelectedData.styles[styleName]" />
+                                        <StyleComponent :title="styleData.Info.name" :selected="JSON.stringify(totalSelectedData.styles[styleName])" />
                                     </div>
                                 </div>
                             </div>
@@ -75,23 +75,19 @@
                             </div>
                         </div>
 
-                        <div id="tab-summary" class="_overflow-y-auto _h-auto tab-summary" :class="activeTab === 'Summary' ? '_block' : '_hidden'">
+                        <div  id="tab-summary" class="_overflow-y-auto _h-auto tab-summary" :class="activeTab === 'Summary' ? '_block' : '_hidden'">
                             <div>
                                 <h3 class="_text-center _font-light _text-xl _text-gray-900 _pt-10 _py-2">Summary</h3>
                             </div>
-                            <div class="_w-[85%] _mx-auto _my-1">
-                                <StyleComponent v-if="totalSelectedData.keyFabric" title="Fabric" :selected="totalSelectedData.keyFabric" />
-                                <StyleComponent v-if="totalSelectedData.size" title="Size" :selected="{ name:totalSelectedData.size}" />
-                                <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
-                                    <StyleComponent :title="styleData.Info.name" :selected="totalSelectedData.styles[styleName]" />
-                                </div>
-
+                            <div v-if="activeTab === 'Summary'" class="_w-[85%] _mx-auto _my-1">
+                                
+                                <SummaryData v-for="(item, key) in summaryArray" :key="key" :summary-item="item" />
                             </div>
                         </div>
                         <div id="tab-styledetail" class="_overflow-y-auto _h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? '_block' : '_hidden'">
                             <div class="_w-[85%] _mx-auto _my-1">
-                            <div v-for="(styleData, styleName ) in styleDataDetail" :key="styleName" @click.prevent="chooseStyleDetail(styleName, styleData)">
-                            <StyleDetailComponent :title="styleData.name" :description="styleData.description"/>
+                            <div v-for="(styleData, styleName ) in styleDataDetail" :key="styleName">
+                                <StyleDetailComponent  styleDataDetail.options @emitChooseStyleDetailChildren="chooseStyleDetailChildren" @emitChooseStyleDetail="chooseStyleDetail" :style-data="styleData" :style-key="styleName" :children="styleData.children" />
                             </div>
                             
                             </div>
@@ -105,8 +101,10 @@
                                 </div>
                                 <div class="_flex">
                                     <button @click.prevent="prevChange()" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _rounded-md _mx-1">Prev</button>
-                                    <button @click.prevent="nextChange()" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Next</button>
+                                    <button v-if="activeTab !== 'Summary'" @click.prevent="nextChange()" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Next</button>
+                                    <button  v-if="activeTab === 'Summary'" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Add to cart</button>
                                 </div>
+                                <div class="_hidden" id="json-add-to-cart" :json="JSON.stringify(jsonAddToCart)"></div>
                             </div>
                         </div>
                         
@@ -124,6 +122,7 @@ import FabricComponent from './FabricComponent.vue'
 import StyleComponent from './StyleComponent.vue'
 import StyleDetailComponent from './StyleDetailComponent.vue'
 import SizeComponent from './SizeComponent.vue'
+import SummaryData from './SummaryData.vue'
 import gsap from 'gsap'
 
 export default {
@@ -134,6 +133,14 @@ export default {
     styles: Object,
     mapping: Object,
     productId: Number
+  },
+  watch: {
+    activeTab(newTab) {
+      if (newTab === 'Summary') {
+        this.getSummary();
+        this.buildDataResultJSON();
+      }
+    },
   },
   data() {
     return {
@@ -147,9 +154,20 @@ export default {
             },
             size: null
         },
+        totalSelectedDisplay: {
+           keyFabric: null,
+            styles : {
+            },
+            size: null 
+        },
         styleDataDetail: null,
         currentStyleKey : null,
-        zoomed: false
+        currentStyleName: null,
+        zoomed: false,
+        isChangeStyle: true,
+        imageListKey : [],
+        summaryArray: [],
+        jsonAddToCart: {}
     }
   },
   components: {
@@ -158,6 +176,7 @@ export default {
     StyleComponent,
     StyleDetailComponent,
     SizeComponent,
+    SummaryData
 },
   beforeMount() {
     this.mainImage = this.productData.Image
@@ -179,65 +198,76 @@ export default {
     });
 
     imageContainer.addEventListener("click", () => {
-        if (this.zoomed) {
-            // If already zoomed in, switch to minus icon
-            //setTimeout(() => {
-            //    hoverIcon.innerHTML = '<p>-</p>';
-            //}, 0)
-            gsap.to(mainImage, {
-            scale: 1.5, // Zoom in
-            duration: 0.3,
-            });
-        } else {
-            // If not zoomed, switch to plus icon
-            //setTimeout(() => {
-            //    hoverIcon.innerHTML = '<p>+</p>';
-            //}, 100)
-            gsap.to(mainImage, {
-            scale: 1, // Zoom out
-            duration: 0.3,
-            });
-        }
         this.zoomed = !this.zoomed; // Toggle the zoom state
     });
 
-    
-
-
   },
-dropDown() {
-    var dropdownbtn = document.querySelector("#dropdownbtn");
-    dropdownbtn.addEventListener("click", function dropdown(){
-        var dropdown = document.querySelector("#dropdown");
-        if (dropdown.style.display === "none") {
-            dropdown.style.display = "block";
-        } else {
-            dropdown.style.display = "none";
-        }
-    });
-    
-},
   methods: {
+    buildDataResultJSON() {
+        this.jsonAddToCart =  {
+            productId: this.productId,
+            variation: this.summaryArray
+        }
+    },
+    getSummary() {
+        this.summaryArray = [];
+        let fabric = this.totalSelectedData.keyFabric;
+        if (fabric.key && fabric.name && fabric.parent) {
+            this.summaryArray.push({
+                "key": fabric.key,
+                "name": fabric.name,
+                "parent": fabric.parent
+            });
+        }
+        let styles = this.totalSelectedData.styles;
+        for (const key in styles) {
+            if (styles[key].key && styles[key].name && styles[key].parent) {
+                this.summaryArray.push({
+                    "key": styles[key].key,
+                    "name": styles[key].name,
+                    "parent": styles[key].parent
+                });
+            }
+            if (styles[key].children) {
+                for (const childKey in styles[key].children) {
+                const child = styles[key].children[childKey];
+                this.summaryArray.push({
+                    "key": child.key,
+                    "name": child.name,
+                    "parent": child.parent
+                });
+                }
+            }
+        }
+    },
+    // Function to traverse the JSON and collect values
+    collectValues(jsonData) {
+        if (typeof jsonData === 'object' && jsonData !== null) {
+            for (const key in jsonData) {
+            if (key === 'key') {
+                this.imageListKey.push(jsonData[key]);
+            }
+            this.collectValues(jsonData[key]);
+            }
+        } else if (Array.isArray(jsonData)) {
+            for (const item of jsonData) {
+                this.collectValues(item);
+            }
+        }
+    },
     findImage() {
-        const { keyFabric, styles } = this.totalSelectedData;
-
-        const styleKeys = Object.values(styles)
-            .map(style => style.key)
-            .filter(key => key !== undefined);
-        const keysToCompare = [keyFabric.key, ...styleKeys];
-        
-        const imageList = [];
-
-        for (const key of keysToCompare) {
+        this.collectValues(this.totalSelectedData);
+        let imageList = [];
+        for (const key of this.imageListKey) {
             if (this.mapping.hasOwnProperty(key)) {
-            imageList.push(this.mapping[key]);
+                imageList.push(this.mapping[key]);
             }
         }
         this.mainImages = imageList;
     },
     changeFabric(fabricData, keyFabric) {
       console.log("Get image match " + keyFabric);
-      this.totalSelectedData.keyFabric = { key: keyFabric, name: fabricData.name};
+      this.totalSelectedData.keyFabric = { key: keyFabric, name: fabricData.name, parent: "Fabric"};
       this.findImage();
       
     },
@@ -247,14 +277,29 @@ dropDown() {
     },
     changeStyle(styleData, styleKey) {
         this.changeTab("StyleDetail");
+        this.isChangeStyle = false;
         this.styleDataDetail = styleData.Options;
-        this.totalSelectedData.styles[styleKey] = {};
+        if(this.totalSelectedData.styles[styleKey] == null) {
+            this.totalSelectedData.styles[styleKey] = {"children": {}}; 
+        }
         this.currentStyleKey = styleKey;
+        this.currentStyleName = styleData.Info.name;
     },
     chooseStyleDetail(styleName, styleData) {
         this.changeTab("Style");
+        this.isChangeStyle = true;
         if(this.currentStyleKey) {
-            this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name};
+            this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name, parent: this.currentStyleName};
+            this.findImage();
+        } else {
+          throw new Error("Incorrect currentStyleKey: " + currentStyleKey);  
+        } 
+    },
+    chooseStyleDetailChildren(styleName, styleData, parentKey, parentName) {
+        this.changeTab("Style");
+        this.isChangeStyle = true;
+        if(this.currentStyleKey) {
+            this.totalSelectedData.styles[this.currentStyleKey]['children'][parentKey] = {key: styleName, name: styleData.name, parent: parentName};
             this.findImage();
         } else {
           throw new Error("Incorrect currentStyleKey: " + currentStyleKey);  
@@ -282,7 +327,6 @@ dropDown() {
     handleSizeEmitted(size) {
         this.totalSelectedData.size = size;
         this.changeTab("Summary");
-
     }
   }
 }

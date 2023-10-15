@@ -10,7 +10,7 @@
         </div>
         <div class="_flex _justify-between _px-4 _py-2 _text-sm ">
             <h3 class=" group-focus:_font-medium ">{{title}}</h3>
-            <h3 v-if="price"><span class=" group-focus:_font-medium ">${{price}}</span> USD</h3>
+            <h3 v-if="price"><span class=" group-focus:_font-medium ">{{price}}</span> đ</h3>
         </div>
     </div>
 </template>

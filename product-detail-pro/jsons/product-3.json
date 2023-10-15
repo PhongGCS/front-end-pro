@@ -72,137 +72,134 @@
             "WaistbandStyle": {
               "name": "Waistband Style",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "children":[
-                {"Standardbutton":{
+              "children":{
+                "Standardbutton":{
                     "name": "Standard Button",
                     "description": "Slanted welted pockets are slightly angled for easier access1."
-                }} ,
-                {"StandardElasticatedBack":{
+                },
+                "StandardElasticatedBack":{
                     "name": "Standard Elasticated back",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"StandardHiddenBack":{
+                },
+                "StandardHiddenBack":{
                     "name": "Standard Hidden back",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"DrawstringElasticedSides":{
+                },
+                "DrawstringElasticedSides":{
                     "name": "Drawstring Elasticed Sides",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"DrawstringFullyElasticed":{
+                },
+                "DrawstringFullyElasticed":{
                     "name": "Drawstring fully Elasticed",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"ExtendedPeak":{
+                },
+                "ExtendedPeak":{
                     "name": "Extended Peak",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"ExtendedStraight":{
+                },
+                "ExtendedStraight":{
                     "name": "Extended Straight",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"ExtendedPeakSlim":{
+                },
+                "ExtendedPeakSlim":{
                     "name": "Extended Peak Slim",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"SingleSideClosure":{
+                },
+                "SingleSideClosure":{
                     "name": "Single Side Closure",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} ,
-                {"DoubleSideClosure":{
+                },
+                "DoubleSideClosure":{
                     "name": "Double Side Closure",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }} 
-              ]
+                }
+              }
             },
             "WaistbandHeight": {
               "name": "Waistband Height",
               "description": "Slanted welted pockets are slightly angled for easier access2.",
-              "image": "/product-detail-pro/images/vicenza.avif",
-              "children": [
-                {"Standard3.5cm":{
+              "iage": "/product-detail-pro/images/vicenza.avif",
+              "children": {
+                "Standard3.5cm":{
                     "name": "3.5 cm - Standard",
                     "description": "Slanted welted pockets are slightly angled for easier access1."
-                }},
-                {"cm4":{
+                },
+                "cm4":{
                     "name": "4 cm",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }},
-                {"cm4.5":{
+                },
+                "cm4.5":{
                     "name": "4.5 cm",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }},
-                {"cm5":{
+                },
+                "cm5":{
                     "name": "5 cm",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-                }}
-              ]
+                }
+              }
             },
             "WaistbandDetail": {
               "name": "Waistband Detail",
               "description": "Slanted welted pockets are slightly angled for easier access3.",
               "image": "/product-detail-pro/images/vicenza.avif",
-              "children": [
-                {"BeltLoops":{
+              "children": {
+                "BeltLoops":{
                     "name": "Belt Loops",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-
-                }},
-                {"ClassicSideAdjusters":{
+                },
+                "ClassicSideAdjusters":{
                     "name": "Classic Side Adjusters",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
 
-                }},
-                {"LongSideAdjuster":{
+                },
+                "LongSideAdjuster":{
                     "name": "Long Side Adjuster",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-
-                }},
-                {"WingedSideAdjuster":{
+                },
+                "WingedSideAdjuster":{
                     "name": "Winged Side Adjuster",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
                     "image": "/product-detail-pro/images/vicenza.avif"
-
-                }},
-                {"None":{
+                },
+                "None":{
                     "name": "None",
                     "description": "Slanted welted pockets are slightly angled for easier access1."
-                }}
-              ]
+                }
+              }
             },
             "WaistbandConstruction": {
               "name": "Waistband Construction",
               "description": "Slanted welted pockets are slightly angled for easier access3.",
               "image": "/product-detail-pro/images/vicenza.avif",
-              "children": [
-                {"Traditional": {
+              "children": {
+                "Traditional": {
                     "name": "Traditional",
                     "description": "Slanted welted pockets are slightly angled for easier access3."
-                }},
-                {"Curtain": {
+                },
+                "Curtain": {
                     "name": "Curtain",
                     "description": "Slanted welted pockets are slightly angled for easier access3."
-                }},
-                {"Fishtail": {
+                },
+                "Fishtail": {
                     "name": "Fishtail",
                     "description": "Slanted welted pockets are slightly angled for easier access3."
-                }}
-              ]
+                }
+              }
             }
           }
         },
@@ -331,70 +328,70 @@
               "SidePocket": {
                 "name": "Side Pocket",
                 "description": "Slanted welted pockets are slightly angled for easier access1.",
-                "children": [
-                    {"Slanted": {
+                "children": {
+                    "Slanted": {
                         "name": "Slanted",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"Jetted": {
+                    },
+                    "Jetted": {
                         "name": "Jetted",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"Seam": {
+                    },
+                    "Seam": {
                         "name": "Seam",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"Rounded": {
+                    },
+                    "Rounded": {
                         "name": "Rounded",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }}
-                ]
+                    }
+                }
               },
               "LegPocket": {
                 "name": "Leg Pocket",
                 "description": "Slanted welted pockets are slightly angled for easier access1.",
-                "children": [
-                    {"NoLegPocket": {
+                "children": {
+                    "NoLegPocket": {
                         "name": "No Leg Pocket",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"BoxPleatCargoPocket": {
+                    },
+                    "BoxPleatCargoPocket": {
                         "name": "Box Pleat Cargo Pocket",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"EnvelopeCargoPocket": {
+                    },
+                    "EnvelopeCargoPocket": {
                         "name": "Envelope Cargo Pocket",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }}
-                ]
+                    }
+                  }
               },
               "CoinPocket": {
                 "name": "Coin Pocket",
                 "description": "Slanted welted pockets are slightly angled for easier access1.",
-                "children": [
-                    {"NoCoinPocket": {
+                "children": {
+                    "NoCoinPocket": {
                         "name": "No Coin Pocket",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"HiddenCoinPocket": {
+                    },
+                    "HiddenCoinPocket": {
                         "name": "Hidden Coin Pocket",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }},
-                    {"FlapCoinPocket": {
+                    },
+                    "FlapCoinPocket": {
                         "name": "Flap Coin Pocket",
                         "description": "Slanted welted pockets are slightly angled for easier access1.",
                         "image": "/product-detail-pro/images/vicenza.avif"
-                    }}
-                ]
+                    }
+                  }
               }
             }
         },

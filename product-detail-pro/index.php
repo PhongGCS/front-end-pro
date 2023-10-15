@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="_flex _items-center _py-2 _w-full">
+        <div class="_flex _items-center _py-2 _w-full _h-102px">
             <button  class="_my-auto _ml-3 _w-1/3 ">
                 <div class="w-[20px] _m-1.5 _h-[1.5px] _bg-gray-700"></div>
                 <div class="w-[20px] _m-1.5 _h-[1.5px] _bg-gray-700"></div>

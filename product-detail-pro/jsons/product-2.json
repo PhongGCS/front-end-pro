@@ -3,7 +3,7 @@
       "ProductName": "Waistcoat",
       "Price": "643 USD",
       "Delivery": "Delivery 2-3 weeks",
-      "Image": "/product-detail-pro/images//MAIN_1.webp"
+      "Image": "/wp-content/uploads/2023/10/MAIN_1.webp"
     },
     "Data": {
       "Fabric": {
@@ -13,52 +13,52 @@
         "Options": {
           "Fabric1": {
             "name": "Fabric 1",
-            "image": "/product-detail-pro/images/fabric1.avif"
+            "image": "/wp-content/uploads/2023/10/fabric1.avif"
             
           },
           "Fabric2": {
             "name": "Fabric 2",
-            "image": "/product-detail-pro/images/fabric2.avif"
+            "image": "/wp-content/uploads/2023/10/fabric2.avif"
             
           },
           "Fabric3": {
             "name": "Fabric 3",
-            "image": "/product-detail-pro/images/fabric3.avif"
+            "image": "/wp-content/uploads/2023/10/fabric3.avif"
             
           },
           "Fabric4": {
             "name": "Fabric 4",
-            "image": "/product-detail-pro/images/fabric4.avif"
+            "image": "/wp-content/uploads/2023/10/fabric4.avif"
             
           },
           "Fabric5": {
             "name": "Fabric 5",
-            "image": "/product-detail-pro/images/fabric5.avif"
+            "image": "/wp-content/uploads/2023/10/fabric5.avif"
             
           },
           "Fabric6": {
             "name": "Fabric 6",
-            "image": "/product-detail-pro/images/fabric6.avif"
+            "image": "/wp-content/uploads/2023/10/fabric6.avif"
             
           },
           "Fabric7": {
             "name": "Fabric 7",
-            "image": "/product-detail-pro/images/fabric7.avif"
+            "image": "/wp-content/uploads/2023/10/fabric7.avif"
             
           },
           "Fabric8": {
             "name": "Fabric 8",
-            "image": "/product-detail-pro/images/fabric8.avif"
+            "image": "/wp-content/uploads/2023/10/fabric8.avif"
             
           },
           "Fabric9": {
             "name": "Fabric 9",
-            "image": "/product-detail-pro/images/fabric9.avif"
+            "image": "/wp-content/uploads/2023/10/fabric9.avif"
             
           },
           "Fabric10": {
             "name": "Fabric 10",
-            "image": "/product-detail-pro/images/fabric10.avif"
+            "image": "/wp-content/uploads/2023/10/fabric10.avif"
           }
         }
       },
@@ -72,17 +72,17 @@
             "NotchLapel": {
               "name": "Notch Lapel",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "PeakLapel": {
               "name": "Peak Lapel",
               "description": "Slanted welted pockets are slightly angled for easier access2.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "ShawlLapel": {
               "name": "Shawl Lapel",
               "description": "Slanted welted pockets are slightly angled for easier access3.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             }
           }
         },
@@ -94,19 +94,19 @@
           "Options": {
             "SingleBreastedButton5": {
               "name": "Single Breasted 5 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "SingleBreastedButton6": {
               "name": "Single Breasted 6 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "DoubleBreastedButton6": {
               "name": "Double Breasted 6 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "DoubleBreastedButton8": {
               "name": "Double Breasted 8 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             }
           }
         },
@@ -123,12 +123,12 @@
             "Single": {
               "name": "Single",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "DualPockets": {
               "name": "Dual Pockets",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             }
           }
         },
@@ -141,12 +141,12 @@
             "JettedPockets": {
               "name": "Jetted Pockets",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "StraightPockets": {
               "name": "Straight Pockets",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             }
           }
         },
@@ -159,12 +159,12 @@
             "Lining": {
               "name": "Lining",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "Fabric": {
               "name": "Fabric",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             }
           }
         },
@@ -177,72 +177,72 @@
             "AMFNo": {
               "name": "No",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "mm2": {
               "name": "2 mm",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "mm6": {
               "name": "6 mm",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             },
             "DoubleAMF": {
               "name": "Double AMF",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
             }
           }
         }
       }
     },
     "Mapping": {
-      "Fabric1": "/product-detail-pro/images/MAIN_1.webp",
-      "Fabric2": "/product-detail-pro/images/MAIN_2.webp",
-      "Fabric3": "/product-detail-pro/images/MAIN_3.webp",
-      "Fabric4": "/product-detail-pro/images/MAIN_4.webp",
-      "Fabric6": "/product-detail-pro/images/MAIN_1.webp",
-      "Fabric7": "/product-detail-pro/images/MAIN_2.webp",
-      "Fabric8": "/product-detail-pro/images/MAIN_3.webp",
-      "Fabric9": "/product-detail-pro/images/MAIN_4.webp",
-      "Fabric10": "/product-detail-pro/images/MAIN_1.webp",
-      "NotchLapel": "/product-detail-pro/images/MAIN_1.webp",
-      "PeakLapel": "/product-detail-pro/images/MAIN_2.webp",
-      "ShawlLapel": "/product-detail-pro/images/MAIN_3.webp",
-      "Button1": "/product-detail-pro/images/MAIN_1.webp",
-      "Button2": "/product-detail-pro/images/MAIN_2.webp",
-      "Button25": "/product-detail-pro/images/MAIN_3.webp",
-      "Button3": "/product-detail-pro/images/MAIN_1.webp",
-      "ButtonsDoubleBreasted4": "/product-detail-pro/images/MAIN_2.webp",
-      "ButtonsDoubleBreasted6": "/product-detail-pro/images/MAIN_3.webp",
-      "BoatShape": "/product-detail-pro/images/MAIN_4.webp",
-      "ChestPocketPatch": "/product-detail-pro/images/MAIN_2.webp",
-      "ChestPocketRoundedPatch": "/product-detail-pro/images/MAIN_3.webp",
-      "ChestPocketPleatedPatch": "/product-detail-pro/images/MAIN_1.webp",
-      "SmallFlap": "/product-detail-pro/images/MAIN_2.webp",
-      "LargeFlap": "/product-detail-pro/images/MAIN_3.webp",
-      "SlantedFlap": "/product-detail-pro/images/MAIN_1.webp",
-      "Jetted": "/product-detail-pro/images/MAIN_2.webp",
-      "SlantedJetted": "/product-detail-pro/images/MAIN_3.webp",
-      "SidePocketPatch": "/product-detail-pro/images/MAIN_1.webp",
-      "SidePocketRoundedPatch": "/product-detail-pro/images/MAIN_2.webp",
-      "SidePocketPleatedPatch": "/product-detail-pro/images/MAIN_3.webp",
-      "TicketPocketYes": "/product-detail-pro/images/MAIN_1.webp",
-      "Novent": "/product-detail-pro/images/MAIN_2.webp",
-      "Singleevent": "/product-detail-pro/images/MAIN_3.webp",
-      "Doublevent": "/product-detail-pro/images/MAIN_1.webp",
-      "KissingButtons3": "/product-detail-pro/images/MAIN_2.webp",
-      "KissingButtons4": "/product-detail-pro/images/MAIN_3.webp",
-      "KissingButtons5": "/product-detail-pro/images/MAIN_1.webp",
-      "FullLined": "/product-detail-pro/images/MAIN_2.webp",
-      "Lined1_2": "/product-detail-pro/images/MAIN_3.webp",
-      "ButterflyLining": "/product-detail-pro/images/MAIN_1.webp",
-      "Unlined": "/product-detail-pro/images/MAIN_2.webp",
-      "Structured": "/product-detail-pro/images/MAIN_3.webp",
-      "Padded": "/product-detail-pro/images/MAIN_1.webp",
-      "Natural": "/product-detail-pro/images/MAIN_2.webp",
-      "Unstructured": "/product-detail-pro/images/MAIN_3.webp"
+      "Fabric1": "/wp-content/uploads/2023/10/001.webp",
+      "Fabric2": "/wp-content/uploads/2023/10/002.webp",
+      "Fabric3": "/wp-content/uploads/2023/10/003.jpeg",
+      "Fabric4": "/wp-content/uploads/2023/10/004.jpeg",
+      "Fabric6": "/wp-content/uploads/2023/10/005.jpeg",
+      "Fabric7": "/wp-content/uploads/2023/10/006.webp",
+      "Fabric8": "/wp-content/uploads/2023/10/007.webp",
+      "Fabric9": "/wp-content/uploads/2023/10/010.webp",
+      "Fabric10": "/wp-content/uploads/2023/10/009.webp",
+      "NotchLapel": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "PeakLapel": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "ShawlLapel": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Button1": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Button2": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Button25": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Button3": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "ButtonsDoubleBreasted4": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "ButtonsDoubleBreasted6": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "BoatShape": "/wp-content/uploads/2023/10/MAIN_4.webp",
+      "ChestPocketPatch": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "ChestPocketRoundedPatch": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "ChestPocketPleatedPatch": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "SmallFlap": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "LargeFlap": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "SlantedFlap": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Jetted": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "SlantedJetted": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "SidePocketPatch": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "SidePocketRoundedPatch": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "SidePocketPleatedPatch": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "TicketPocketYes": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Novent": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Singleevent": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Doublevent": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "KissingButtons3": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "KissingButtons4": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "KissingButtons5": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "FullLined": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Lined1_2": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "ButterflyLining": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Unlined": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Structured": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Padded": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Natural": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Unstructured": "/wp-content/uploads/2023/10/MAIN_3.webp"
     }
   }

@@ -1,394 +1,394 @@
 {
-    "ProductData": {
-      "ProductName": "Blazer",
-      "Price": "643 USD",
-      "Delivery": "Delivery 2-3 weeks",
-      "Image": "/product-detail-pro/images//MAIN_1.webp"
-    },
-    "Data": {
-      "Fabric": {
-        "Info": {
-          "Style": "FabricComponent"
-        },
-        "Options": {
-          "Fabric1": {
-            "name": "Fabric 1",
-            "image": "/product-detail-pro/images/fabric1.avif"
-            
-          },
-          "Fabric2": {
-            "name": "Fabric 2",
-            "image": "/product-detail-pro/images/fabric2.avif"
-            
-          },
-          "Fabric3": {
-            "name": "Fabric 3",
-            "image": "/product-detail-pro/images/fabric3.avif"
-            
-          },
-          "Fabric4": {
-            "name": "Fabric 4",
-            "image": "/product-detail-pro/images/fabric4.avif"
-            
-          },
-          "Fabric5": {
-            "name": "Fabric 5",
-            "image": "/product-detail-pro/images/fabric5.avif"
-            
-          },
-          "Fabric6": {
-            "name": "Fabric 6",
-            "image": "/product-detail-pro/images/fabric6.avif"
-            
-          },
-          "Fabric7": {
-            "name": "Fabric 7",
-            "image": "/product-detail-pro/images/fabric7.avif"
-            
-          },
-          "Fabric8": {
-            "name": "Fabric 8",
-            "image": "/product-detail-pro/images/fabric8.avif"
-            
-          },
-          "Fabric9": {
-            "name": "Fabric 9",
-            "image": "/product-detail-pro/images/fabric9.avif"
-            
-          },
-          "Fabric10": {
-            "name": "Fabric 10",
-            "image": "/product-detail-pro/images/fabric10.avif"
-          }
-        }
+  "ProductData": {
+    "ProductName": "Blazer",
+    "Price": "643 USD",
+    "Delivery": "Delivery 2-3 weeks",
+    "Image": "/wp-content/uploads/2023/10/001.webp"
+  },
+  "Data": {
+    "Fabric": {
+      "Info": {
+        "Style": "FabricComponent"
       },
-      "Styles": {
-        "Style": {
-          "Info": {
-            "name": "Style",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "NotchLapel": {
-              "name": "Notch Lapel",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "PeakLapel": {
-              "name": "Peak Lapel",
-              "description": "Slanted welted pockets are slightly angled for easier access2.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ShawlLapel": {
-              "name": "Shawl Lapel",
-              "description": "Slanted welted pockets are slightly angled for easier access3.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+      "Options": {
+        "Fabric1": {
+          "name": "Fabric 1",
+          "image": "/wp-content/uploads/2023/10/fabric1.avif"
+          
         },
-        "Closure": {
-          "Info": {
-            "name": "Closure",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "Button1": {
-              "name": "1 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Button2": {
-              "name": "2 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Button25": {
-              "name": "2.5 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Button3": {
-              "name": "3 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ButtonsDoubleBreasted4": {
-              "name": "4 Buttons Double Breasted",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ButtonsDoubleBreasted6": {
-              "name": "6 Buttons Double Breasted",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric2": {
+          "name": "Fabric 2",
+          "image": "/wp-content/uploads/2023/10/fabric2.avif"
+          
         },
-        "ChestPocket": {
-          "Info": {
-            "name": "Chest Pocket",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "BoatShape": {
-              "name": "Boat Shape",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ChestPocketPatch": {
-              "name": "Patch",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ChestPocketRoundedPatch": {
-              "name": "Rounded Patch",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ChestPocketPleatedPatch": {
-              "name": "Pleated Patch",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric3": {
+          "name": "Fabric 3",
+          "image": "/wp-content/uploads/2023/10/fabric3.avif"
+          
         },
-        "SidePocket": {
-          "Info": {
-            "name": "Side Pocket",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "SmallFlap": {
-              "name": "Small Flap",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "LargeFlap": {
-              "name": "Large Flap",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "SlantedFlap": {
-              "name": "Slanted Flap",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Jetted": {
-              "name": "Jetted",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "SlantedJetted": {
-              "name": "Slanted Jetted",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Patch": {
-              "name": "Patch",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "RoundedPatch": {
-              "name": "Rounded Patch",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "PleatedPatch": {
-              "name": "Pleated Patch",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric4": {
+          "name": "Fabric 4",
+          "image": "/wp-content/uploads/2023/10/fabric4.avif"
+          
         },
-        "TicketPocket": {
-          "Info": {
-            "name": "Ticket Pocket",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "TicketPocketYes": {
-              "name": "Yes",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "TicketPocketNo": {
-              "name": "No",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric5": {
+          "name": "Fabric 5",
+          "image": "/wp-content/uploads/2023/10/fabric5.avif"
+          
         },
-        "Vent": {
-          "Info": {
-            "name": "Vent",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "Novent": {
-              "name": "No vent",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Singlevent": {
-              "name": "Single vent",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Doublevent": {
-              "name": "Double vent",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric6": {
+          "name": "Fabric 6",
+          "image": "/wp-content/uploads/2023/10/fabric6.avif"
+          
         },
-        "SleeveButtons": {
-          "Info": {
-            "name": "Sleeve Buttons",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "KissingButtons3": {
-              "name": "3 Kissing Buttons",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "KissingButtons4": {
-              "name": "4 Kissing Buttons",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "KissingButtons5": {
-              "name": "5 Kissing Buttons",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric7": {
+          "name": "Fabric 7",
+          "image": "/wp-content/uploads/2023/10/fabric7.avif"
+          
         },
-        "LiningType": {
-          "Info": {
-            "name": "Lining Type",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "FullLined": {
-              "name": "Full Lined",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Lined1_2": {
-              "name": "1/2 Lined",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "ButterflyLining": {
-              "name": "Butterfly Lining",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Unlined": {
-              "name": "Unlined",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric8": {
+          "name": "Fabric 8",
+          "image": "/wp-content/uploads/2023/10/fabric8.avif"
+          
         },
-        "Shoulder": {
-          "Info": {
-            "name": "Shoulder",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "Structured": {
-              "name": "Structured",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Padded": {
-              "name": "Padded",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Natural": {
-              "name": "Natural",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "Unstructured": {
-              "name": "Unstructured",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric9": {
+          "name": "Fabric 9",
+          "image": "/wp-content/uploads/2023/10/fabric9.avif"
+          
         },
-        "AMF": {
-          "Info": {
-            "name": "AMF",
-            "Style": "StyleComponent"
-          },
-          "Options": {
-            "AMFNo": {
-              "name": "No",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "mm2": {
-              "name": "2 mm",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "mm6": {
-              "name": "6 mm",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            },
-            "DoubleAMF": {
-              "name": "Double AMF",
-              "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
-            }
-          }
+        "Fabric10": {
+          "name": "Fabric 10",
+          "image": "/wp-content/uploads/2023/10/fabric10.avif"
         }
       }
     },
-    "Mapping": {
-      "Fabric1": "/product-detail-pro/images/MAIN_1.webp",
-      "Fabric2": "/product-detail-pro/images/MAIN_2.webp",
-      "Fabric3": "/product-detail-pro/images/MAIN_3.webp",
-      "Fabric4": "/product-detail-pro/images/MAIN_4.webp",
-      "Fabric6": "/product-detail-pro/images/MAIN_1.webp",
-      "Fabric7": "/product-detail-pro/images/MAIN_2.webp",
-      "Fabric8": "/product-detail-pro/images/MAIN_3.webp",
-      "Fabric9": "/product-detail-pro/images/MAIN_4.webp",
-      "Fabric10": "/product-detail-pro/images/MAIN_1.webp",
-      "NotchLapel": "/product-detail-pro/images/MAIN_1.webp",
-      "PeakLapel": "/product-detail-pro/images/MAIN_2.webp",
-      "ShawlLapel": "/product-detail-pro/images/MAIN_3.webp",
-      "Button1": "/product-detail-pro/images/MAIN_1.webp",
-      "Button2": "/product-detail-pro/images/MAIN_2.webp",
-      "Button25": "/product-detail-pro/images/MAIN_3.webp",
-      "Button3": "/product-detail-pro/images/MAIN_1.webp",
-      "ButtonsDoubleBreasted4": "/product-detail-pro/images/MAIN_2.webp",
-      "ButtonsDoubleBreasted6": "/product-detail-pro/images/MAIN_3.webp",
-      "BoatShape": "/product-detail-pro/images/MAIN_4.webp",
-      "ChestPocketPatch": "/product-detail-pro/images/MAIN_2.webp",
-      "ChestPocketRoundedPatch": "/product-detail-pro/images/MAIN_3.webp",
-      "ChestPocketPleatedPatch": "/product-detail-pro/images/MAIN_1.webp",
-      "SmallFlap": "/product-detail-pro/images/MAIN_2.webp",
-      "LargeFlap": "/product-detail-pro/images/MAIN_3.webp",
-      "SlantedFlap": "/product-detail-pro/images/MAIN_1.webp",
-      "Jetted": "/product-detail-pro/images/MAIN_2.webp",
-      "SlantedJetted": "/product-detail-pro/images/MAIN_3.webp",
-      "SidePocketPatch": "/product-detail-pro/images/MAIN_1.webp",
-      "SidePocketRoundedPatch": "/product-detail-pro/images/MAIN_2.webp",
-      "SidePocketPleatedPatch": "/product-detail-pro/images/MAIN_3.webp",
-      "TicketPocketYes": "/product-detail-pro/images/MAIN_1.webp",
-      "Novent": "/product-detail-pro/images/MAIN_2.webp",
-      "Singleevent": "/product-detail-pro/images/MAIN_3.webp",
-      "Doublevent": "/product-detail-pro/images/MAIN_1.webp",
-      "KissingButtons3": "/product-detail-pro/images/MAIN_2.webp",
-      "KissingButtons4": "/product-detail-pro/images/MAIN_3.webp",
-      "KissingButtons5": "/product-detail-pro/images/MAIN_1.webp",
-      "FullLined": "/product-detail-pro/images/MAIN_2.webp",
-      "Lined1_2": "/product-detail-pro/images/MAIN_3.webp",
-      "ButterflyLining": "/product-detail-pro/images/MAIN_1.webp",
-      "Unlined": "/product-detail-pro/images/MAIN_2.webp",
-      "Structured": "/product-detail-pro/images/MAIN_3.webp",
-      "Padded": "/product-detail-pro/images/MAIN_1.webp",
-      "Natural": "/product-detail-pro/images/MAIN_2.webp",
-      "Unstructured": "/product-detail-pro/images/MAIN_3.webp"
+    "Styles": {
+      "Style": {
+        "Info": {
+          "name": "Style",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "NotchLapel": {
+            "name": "Notch Lapel",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "PeakLapel": {
+            "name": "Peak Lapel",
+            "description": "Slanted welted pockets are slightly angled for easier access2.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ShawlLapel": {
+            "name": "Shawl Lapel",
+            "description": "Slanted welted pockets are slightly angled for easier access3.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "Closure": {
+        "Info": {
+          "name": "Closure",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "Button1": {
+            "name": "1 Button",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Button2": {
+            "name": "2 Button",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Button25": {
+            "name": "2.5 Button",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Button3": {
+            "name": "3 Button",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ButtonsDoubleBreasted4": {
+            "name": "4 Buttons Double Breasted",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ButtonsDoubleBreasted6": {
+            "name": "6 Buttons Double Breasted",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "ChestPocket": {
+        "Info": {
+          "name": "Chest Pocket",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "BoatShape": {
+            "name": "Boat Shape",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ChestPocketPatch": {
+            "name": "Patch",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ChestPocketRoundedPatch": {
+            "name": "Rounded Patch",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ChestPocketPleatedPatch": {
+            "name": "Pleated Patch",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "SidePocket": {
+        "Info": {
+          "name": "Side Pocket",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "SmallFlap": {
+            "name": "Small Flap",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "LargeFlap": {
+            "name": "Large Flap",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "SlantedFlap": {
+            "name": "Slanted Flap",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Jetted": {
+            "name": "Jetted",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "SlantedJetted": {
+            "name": "Slanted Jetted",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Patch": {
+            "name": "Patch",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "RoundedPatch": {
+            "name": "Rounded Patch",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "PleatedPatch": {
+            "name": "Pleated Patch",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "TicketPocket": {
+        "Info": {
+          "name": "Ticket Pocket",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "TicketPocketYes": {
+            "name": "Yes",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "TicketPocketNo": {
+            "name": "No",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "Vent": {
+        "Info": {
+          "name": "Vent",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "Novent": {
+            "name": "No vent",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Singlevent": {
+            "name": "Single vent",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Doublevent": {
+            "name": "Double vent",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "SleeveButtons": {
+        "Info": {
+          "name": "Sleeve Buttons",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "KissingButtons3": {
+            "name": "3 Kissing Buttons",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "KissingButtons4": {
+            "name": "4 Kissing Buttons",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "KissingButtons5": {
+            "name": "5 Kissing Buttons",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "LiningType": {
+        "Info": {
+          "name": "Lining Type",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "FullLined": {
+            "name": "Full Lined",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Lined1_2": {
+            "name": "1/2 Lined",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "ButterflyLining": {
+            "name": "Butterfly Lining",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Unlined": {
+            "name": "Unlined",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "Shoulder": {
+        "Info": {
+          "name": "Shoulder",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "Structured": {
+            "name": "Structured",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Padded": {
+            "name": "Padded",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Natural": {
+            "name": "Natural",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "Unstructured": {
+            "name": "Unstructured",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      },
+      "AMF": {
+        "Info": {
+          "name": "AMF",
+          "Style": "StyleComponent"
+        },
+        "Options": {
+          "AMFNo": {
+            "name": "No",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "mm2": {
+            "name": "2 mm",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "mm6": {
+            "name": "6 mm",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          },
+          "DoubleAMF": {
+            "name": "Double AMF",
+            "description": "Slanted welted pockets are slightly angled for easier access1.",
+            "image": "/wp-content/uploads/2023/10/vicenza.avif"
+          }
+        }
+      }
     }
+  },
+  "Mapping": {
+    "Fabric1": "/wp-content/uploads/2023/10/001.webp",
+    "Fabric2": "/wp-content/uploads/2023/10/002.webp",
+    "Fabric3": "/wp-content/uploads/2023/10/003.jpeg",
+    "Fabric4": "/wp-content/uploads/2023/10/004.jpeg",
+    "Fabric6": "/wp-content/uploads/2023/10/005.jpeg",
+    "Fabric7": "/wp-content/uploads/2023/10/006.webp",
+    "Fabric8": "/wp-content/uploads/2023/10/007.webp",
+    "Fabric9": "/wp-content/uploads/2023/10/010.webp",
+    "Fabric10": "/wp-content/uploads/2023/10/009.webp",
+    "NotchLapel": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "PeakLapel": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ShawlLapel": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Button1": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Button2": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Button25": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Button3": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ButtonsDoubleBreasted4": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ButtonsDoubleBreasted6": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "BoatShape": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ChestPocketPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ChestPocketRoundedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ChestPocketPleatedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "SmallFlap": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "LargeFlap": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "SlantedFlap": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Jetted": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "SlantedJetted": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "SidePocketPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "SidePocketRoundedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "SidePocketPleatedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "TicketPocketYes": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Novent": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Singleevent": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Doublevent": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "KissingButtons3": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "KissingButtons4": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "KissingButtons5": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "FullLined": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Lined1_2": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "ButterflyLining": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Unlined": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Structured": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Padded": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Natural": "/wp-content/uploads/2023/10/nut-ao.avif",
+    "Unstructured": "/wp-content/uploads/2023/10/nut-ao.avif"
   }
+}

@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     
-                        <div class="_mt-auto _border-t _py-4 md:_static _fixed _bottom-0 _bg-white _w-full">
+                        <div class="_mt-auto _border-t _py-4 md:_static _fixed _bottom-0 _bg-white _w-full _z-50">
                             <div class="_flex _justify-between _items-center _w-[85%] _mx-auto _mt-auto md:_pb-0 _pb-4">
                                 <div>
                                     <p class="_text-xs _text-gray-400"> {{productData.Delivery}}</p>

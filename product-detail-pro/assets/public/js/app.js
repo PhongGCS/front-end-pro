@@ -592,7 +592,7 @@ var render = function render() {
   }, [_c("section", [_c("div", {}, [_c("div", {
     staticClass: "md:_flex md:_h-[calc(100vh-49px)]"
   }, [_c("div", {
-    staticClass: "md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10 _h-[calc(90vh-119px)] md:_w-full"
+    staticClass: "md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10 _h-[calc(90vh-119px)] md:_w-full _w-[100vw] _!overflow-hidden"
   }, [_c("div", {
     staticClass: "md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden",
     "class": {

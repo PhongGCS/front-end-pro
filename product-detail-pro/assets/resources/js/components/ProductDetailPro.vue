@@ -3,8 +3,8 @@
      <section>
     <div class="">
             <div class="md:_flex md:_h-[calc(100vh-49px)]">
-                <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full">
-                    <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
+                <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full _w-[100vw] _!overflow-hidden">
+                    <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-49px)] _h-[60vh] _relative _overflow-hidden " id="image-container">
                         <div id="main-image">                            
                             <img
                                 v-for="(image, index) in mainImages"

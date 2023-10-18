@@ -1,0 +1,216 @@
+{
+    "ProductData": {
+      "ProductName": "Coat",
+      "Price": "643 USD",
+      "Delivery": "Delivery 2-3 weeks",
+      "Image": "/wp-content/uploads/2023/10/002.webp"
+    },
+    "Data": {
+      "Fabric": {
+        "Info": {
+          "Style": "FabricComponent"
+        },
+        "Options": {
+          "Fabric1": {
+            "name": "Fabric 1",
+            "image": "/wp-content/uploads/2023/10/fabric1.avif"
+            
+          },
+          "Fabric2": {
+            "name": "Fabric 2",
+            "image": "/wp-content/uploads/2023/10/fabric2.avif"
+            
+          },
+          "Fabric3": {
+            "name": "Fabric 3",
+            "image": "/wp-content/uploads/2023/10/fabric3.avif"
+            
+          },
+          "Fabric4": {
+            "name": "Fabric 4",
+            "image": "/wp-content/uploads/2023/10/fabric4.avif"
+            
+          },
+          "Fabric5": {
+            "name": "Fabric 5",
+            "image": "/wp-content/uploads/2023/10/fabric5.avif"
+            
+          },
+          "Fabric6": {
+            "name": "Fabric 6",
+            "image": "/wp-content/uploads/2023/10/fabric6.avif"
+            
+          },
+          "Fabric7": {
+            "name": "Fabric 7",
+            "image": "/wp-content/uploads/2023/10/fabric7.avif"
+            
+          },
+          "Fabric8": {
+            "name": "Fabric 8",
+            "image": "/wp-content/uploads/2023/10/fabric8.avif"
+            
+          },
+          "Fabric9": {
+            "name": "Fabric 9",
+            "image": "/wp-content/uploads/2023/10/fabric9.avif"
+            
+          },
+          "Fabric10": {
+            "name": "Fabric 10",
+            "image": "/wp-content/uploads/2023/10/fabric10.avif"
+          }
+        }
+      },
+      "Styles": {
+        "Lapel": {
+          "Info": {
+            "name": "Style",
+            "Style": "StyleComponent"
+          },
+          "Options": {
+            "NotchLapel": {
+              "name": "Notch Lapel",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            },
+            "PeakLapel": {
+              "name": "Peak Lapel",
+              "description": "Slanted welted pockets are slightly angled for easier access2.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            }
+          }
+        },
+        "SidePocket": {
+          "Info": {
+            "name": "Side Pocket",
+            "Style": "StyleComponent"
+          },
+          "Options": {
+            "SlantedWelt": {
+              "name": "Slanted Welt",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            },
+            "Flap": {
+              "name": "Flap",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            },
+            "Patch": {
+              "name": "Patch",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            },
+            "FlapPatch": {
+              "name": "Flap Patch",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            }
+          }
+        },
+        "Waistline": {
+          "Info": {
+            "name": "Waistline",
+            "Style": "StyleComponent"
+          },
+          "Options": {
+            "NoBelt": {
+              "name": "No Belt",
+              "description": "Slanted welted pockets are slightly angled for easier access1."
+            },
+            "Martingale": {
+              "name": "Martingale",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            },
+            "BeltAndBeltLoops": {
+              "name": "Belt & Belt Loops",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            }
+          }
+        },
+        "Length": {
+          "Info": {
+            "name": "Length",
+            "Style": "StyleComponent"
+          },
+          "Options": {
+            "ThighLengthStandard": {
+              "name": "Thigh Length (Standard)",
+              "description": "Slanted welted pockets are slightly angled for easier access1."
+            },
+            "ExtendedLength25cm": {
+              "name": "Extended Length 25 cm",
+              "description": "Slanted welted pockets are slightly angled for easier access1.",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif"
+            }
+          }
+        },
+        "Lining": {
+          "Info": {
+            "name": "Lining",
+            "Style": "StyleComponent"
+          },
+          "Options": {
+            "FullLined": {
+              "name": "Full Lined",
+              "description": "Slanted welted pockets are slightly angled for easier access1."
+            },
+            "Unlined": {
+              "name": "Unlined",
+              "description": "Slanted welted pockets are slightly angled for easier access1."
+            }
+          }
+        }
+      }
+    },
+    "Mapping": {
+      "Fabric1": "/wp-content/uploads/2023/10/001.webp",
+      "Fabric2": "/wp-content/uploads/2023/10/002.webp",
+      "Fabric3": "/wp-content/uploads/2023/10/003.jpeg",
+      "Fabric4": "/wp-content/uploads/2023/10/004.jpeg",
+      "Fabric6": "/wp-content/uploads/2023/10/005.jpeg",
+      "Fabric7": "/wp-content/uploads/2023/10/006.webp",
+      "Fabric8": "/wp-content/uploads/2023/10/007.webp",
+      "Fabric9": "/wp-content/uploads/2023/10/010.webp",
+      "Fabric10": "/wp-content/uploads/2023/10/009.webp",
+      "NotchLapel": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "PeakLapel": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "ShawlLapel": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Button1": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Button2": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Button25": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Button3": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "ButtonsDoubleBreasted4": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "ButtonsDoubleBreasted6": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "BoatShape": "/wp-content/uploads/2023/10/MAIN_4.webp",
+      "ChestPocketPatch": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "ChestPocketRoundedPatch": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "ChestPocketPleatedPatch": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "SmallFlap": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "LargeFlap": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "SlantedFlap": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Jetted": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "SlantedJetted": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "SidePocketPatch": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "SidePocketRoundedPatch": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "SidePocketPleatedPatch": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "TicketPocketYes": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Novent": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Singleevent": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Doublevent": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "KissingButtons3": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "KissingButtons4": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "KissingButtons5": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "FullLined": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Lined1_2": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "ButterflyLining": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Unlined": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Structured": "/wp-content/uploads/2023/10/MAIN_3.webp",
+      "Padded": "/wp-content/uploads/2023/10/MAIN_1.webp",
+      "Natural": "/wp-content/uploads/2023/10/MAIN_2.webp",
+      "Unstructured": "/wp-content/uploads/2023/10/MAIN_3.webp"
+    }
+  }

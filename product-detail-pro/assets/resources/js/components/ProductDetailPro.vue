@@ -1,7 +1,7 @@
 <template>
   <div class="product-detail-pro">
      <section>
-    <div class="">
+    <div class="_w-100vw _overflow-hidden">
             <div class="md:_flex md:_h-[calc(100vh-102px)]">
                 <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full">
                     <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-102px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
@@ -35,7 +35,7 @@
                                 :key="index"
                                 :tab-name="tab"
                                 :active-tab="activeTab"
-                                @tab-change="false"
+                                @tab-change="changeTab"
                                 >
                                 {{ tab }}
                             </TabItemHeading>
@@ -100,14 +100,14 @@
                                     <h3 class="_text-sm _text-gray-800 _font-light">{{productData.ProductName}} - {{productData.Price}}</h3>
                                 </div>
                                 <div class="_flex">
-                                    <button @click.prevent="prevChange()" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _rounded-md _mx-1">Prev</button>
-                                    <button v-if="activeTab !== 'Summary'" @click.prevent="nextChange()" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Next</button>
-                                    <button  v-if="activeTab === 'Summary'" class="_border md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Add to cart</button>
+                                    <button @click.prevent="prevChange()" class="_border _border-gray-300 md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _rounded-md _mx-1">Prev</button>
+                                    <button v-if="activeTab !== 'Summary'" @click.prevent="nextChange()" class="_border _border-gray-300 md:_px-11 _px-5 md:_py-2.5 _py-2 _text-sm _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Next</button>
+                                    <button :class="activeTab !== 'Summary' ? '_hidden' : ''" id="cs-add-to-cart" class=" _border _border-gray-300 md:_px-11 _px-5 md:_py-2.5 _py-2 _text-[9px] _bg-[#2d2d2c] _text-white _rounded-md _mx-1">Add to cart</button>
+                                    <div class="_hidden" id="json-add-to-cart">{{jsonAddToCart}}</div>
                                 </div>
-                                <div class="_hidden" id="json-add-to-cart" :json="JSON.stringify(jsonAddToCart)"></div>
+                                
                             </div>
                         </div>
-                        
                     </div>
             </div>
             </div>
@@ -238,6 +238,15 @@ export default {
                 });
                 }
             }
+        }
+
+        let size = this.totalSelectedData.size;
+        if (size) {
+            this.summaryArray.push({
+                "key": "size",
+                "name": size,
+                "parent": "Size"
+            });
         }
     },
     // Function to traverse the JSON and collect values

@@ -23,7 +23,7 @@
                             </div>
                             <div></div>
                             <div>
-                                <div class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">30</div>
+                                <div @click="emitNumber(30)" class="_border _border-gray-300 hover:_border-gray-400 _text-gray-500 _rounded-md _px-12 _py-2">30</div>
                             </div>
                             <div></div>
                             <div class="_flex _items-center">

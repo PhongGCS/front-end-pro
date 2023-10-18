@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     changeTab() {
-      //this.$emit('tab-change', this.tabName);
+      this.$emit('tab-change', this.tabName);
     },
   },
 };

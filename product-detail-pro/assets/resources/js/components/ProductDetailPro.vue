@@ -3,6 +3,7 @@
      <section>
     <div class="_w-100vw _overflow-hidden">
             <div class="md:_flex md:_h-[calc(100vh-102px)]">
+                {{totalSelectedData}}
                 <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full">
                     <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-102px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
                         <div id="main-image">                            
@@ -61,7 +62,7 @@
                                 <h3 class="_text-center _font-light _text-xl _text-gray-900 _pt-10 _py-2">Select your style</h3>
                             </div>
                             <div class="_w-[85%] _mx-auto _my-1">
-                                <div v-if="isChangeStyle">
+                                <div>
                                     <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
                                         <StyleComponent :title="styleData.Info.name" :selected="JSON.stringify(totalSelectedData.styles[styleName])" />
                                     </div>
@@ -284,9 +285,8 @@ export default {
       this.activeTab = tabName;
       gsap.fromTo(`#tab-${tabName.toLowerCase()}`, { x: `${1 * 100}%`, duration: 0.5 },{ x: 0 });
     },
-    changeStyle(styleData, styleKey) {
+    changeStyle(styleData, styleKey) { // Chọn style. Load option
         this.changeTab("StyleDetail");
-        this.isChangeStyle = false;
         this.styleDataDetail = styleData.Options;
         if(this.totalSelectedData.styles[styleKey] == null) {
             this.totalSelectedData.styles[styleKey] = {"children": {}}; 
@@ -294,10 +294,9 @@ export default {
         this.currentStyleKey = styleKey;
         this.currentStyleName = styleData.Info.name;
     },
-    chooseStyleDetail(styleName, styleData) {
+    chooseStyleDetail(styleName, styleData) { // Chọn style level 1: style: { level0 : {key, name, parent} }
         this.changeTab("Style");
-        this.isChangeStyle = true;
-        if(this.currentStyleKey) {
+        if(this.currentStyleKey) { 
             this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name, parent: this.currentStyleName};
             this.findImage();
         } else {
@@ -305,8 +304,7 @@ export default {
         } 
     },
     chooseStyleDetailChildren(styleName, styleData, parentKey, parentName) {
-        this.changeTab("Style");
-        this.isChangeStyle = true;
+        this.changeTab("Style"); // Chọn style level 2 sau đó sẽ đưa vào  style: { level0 : { children:  {key, name, parent} } }
         if(this.currentStyleKey) {
             this.totalSelectedData.styles[this.currentStyleKey]['children'][parentKey] = {key: styleName, name: styleData.name, parent: parentName};
             this.findImage();

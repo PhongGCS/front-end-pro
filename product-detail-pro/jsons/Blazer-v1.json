@@ -13,8 +13,8 @@
         "Options": {
           "Fabric1": {
             "name": "Fabric 1",
-            "image": "/product-detail-pro/images/fabric1.avif"
-            
+            "image": "/product-detail-pro/images/fabric1.avif",
+            "default": true
           },
           "Fabric2": {
             "name": "Fabric 2",
@@ -72,7 +72,8 @@
             "NotchLapel": {
               "name": "Notch Lapel",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/product-detail-pro/images/vicenza.avif",
+              "default": true
             },
             "PeakLapel": {
               "name": "Peak Lapel",
@@ -94,7 +95,8 @@
           "Options": {
             "Button1": {
               "name": "1 Button",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/product-detail-pro/images/vicenza.avif",
+              "default": true
             },
             "Button2": {
               "name": "2 Button",
@@ -127,7 +129,8 @@
             "BoatShape": {
               "name": "Boat Shape",
               "description": "Slanted welted pockets are slightly angled for easier access1.",
-              "image": "/product-detail-pro/images/vicenza.avif"
+              "image": "/product-detail-pro/images/vicenza.avif",
+              "default": true
             },
             "ChestPocketPatch": {
               "name": "Patch",
@@ -390,5 +393,20 @@
       "Padded": "/product-detail-pro/images/MAIN_1.webp",
       "Natural": "/product-detail-pro/images/MAIN_2.webp",
       "Unstructured": "/product-detail-pro/images/MAIN_3.webp"
+    },
+    "Default": {
+      "keyFabric": {
+        "key": "Fabric1",
+        "name": "Fabric 1",
+        "parent": "Fabric"
+      },
+      "styles": {
+        "Closure": {
+          "key": "Button2",
+          "name": "2 Button",
+          "parent": "Closure"
+        }
+      },
+      "size": null
     }
   }

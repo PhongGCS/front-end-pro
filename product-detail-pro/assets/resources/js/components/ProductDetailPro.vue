@@ -162,7 +162,8 @@ export default {
         imageListKey : [],
         summaryArray: [],
         jsonAddToCart: {},
-        resetStyleLevel1: 0
+        resetStyleLevel1: 0,
+        fabricKey: null
     }
   },
   components: {
@@ -214,6 +215,7 @@ export default {
 
         if (selectedFabric) {
             this.totalSelectedData["Fabric"] = selectedFabric;
+            this.fabricKey = selectedFabric.key;
         }
 
         for (const key1 in this.styles) {
@@ -301,7 +303,9 @@ export default {
         this.collectValues(this.totalSelectedData);
         let imageList = [];
         for (const key of this.imageListKey) {
-            if (this.mapping.hasOwnProperty(key)) {
+            if (this.mapping.hasOwnProperty(`${key}_${this.fabricKey}`)) {
+                imageList.push(this.mapping[`${key}_${this.fabricKey}`]);
+            } else if (this.mapping.hasOwnProperty(`${key}`)) {
                 imageList.push(this.mapping[key]);
             }
         }
@@ -310,6 +314,7 @@ export default {
     changeFabric(fabricData, keyFabric) {
       console.log("Get image match " + keyFabric);
       this.totalSelectedData["Fabric"] = { key: keyFabric, name: fabricData.name, parent: "Fabric"};
+      this.fabricKey = keyFabric;
       this.findImage();
       
     },

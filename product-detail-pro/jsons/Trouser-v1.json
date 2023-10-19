@@ -128,11 +128,12 @@
             "WaistbandHeight": {
               "name": "Waistband Height",
               "description": "Slanted welted pockets are slightly angled for easier access2.",
-              "iage": "/wp-content/uploads/2023/10/vicenza.avif",
+              "image": "/wp-content/uploads/2023/10/vicenza.avif",
               "children": {
                 "Standard3.5cm":{
                     "name": "3.5 cm - Standard",
-                    "description": "Slanted welted pockets are slightly angled for easier access1."
+                    "description": "Slanted welted pockets are slightly angled for easier access1.",
+                    "default": true
                 },
                 "cm4":{
                     "name": "4 cm",
@@ -159,7 +160,8 @@
                 "BeltLoops":{
                     "name": "Belt Loops",
                     "description": "Slanted welted pockets are slightly angled for easier access1.",
-                    "image": "/wp-content/uploads/2023/10/vicenza.avif"
+                    "image": "/wp-content/uploads/2023/10/vicenza.avif",
+                    "default": true
                 },
                 "ClassicSideAdjusters":{
                     "name": "Classic Side Adjusters",

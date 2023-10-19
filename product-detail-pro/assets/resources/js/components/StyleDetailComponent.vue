@@ -7,7 +7,7 @@
         </div>
         <div v-if="isShow" class="">
           <div @click.prevent="chooseStyleDetailChildren(styleName, styleDataChildren)" class="_rounded-b-xl _relative _group hover:_bg-gray-100  _flex _justify-center _pt-1" v-for="(styleDataChildren, styleName ) in children" :key="styleName">
-            <div class="_text-sm w-[85%] _flex _justify-between _py-5 _font-light _px-4 _w-full">
+            <div class="_text-sm w-[85%] _flex _justify-between _py-5 _font-light _px-4 _w-full _cursor-pointer">
               {{styleDataChildren.name}}
             </div>
             <HoverInfo v-if="styleDataChildren.description" :description="styleDataChildren.description" />

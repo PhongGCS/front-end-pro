@@ -1,7 +1,6 @@
 <template>
   <div class="product-detail-pro">
      <section>
-        {{totalSelectedData}}  
     <div class="_w-100vw _overflow-hidden">
             <div class="md:_flex md:_h-[calc(100vh-102px)]">
                 
@@ -218,21 +217,38 @@ export default {
         }
 
         for (const key1 in this.styles) {
-            let selectedStyle = null;
-            for (const key2 in this.styles[key1].Options) {
-                const optionStyle = this.styles[key1].Options[key2];
-                if (optionStyle.default) {
-                    selectedStyle = {
+            let selectedStyle1 = null;
+            const styleLevel1 = this.styles[key1];
+            let selectedStyle3 = {};
+            for (const key2 in styleLevel1.Options) {
+                const optionStyle2 = styleLevel1.Options[key2];
+                if (!optionStyle2.children && optionStyle2.default) {
+                    selectedStyle1 = {
                         key: key2,
-                        name: optionStyle.name,
-                        parent: this.styles[key1].Info.name
+                        name: optionStyle2.name,
+                        parent: styleLevel1.Info.name
                     };
                     break;
+                } else {
+                    for (const key3 in optionStyle2.children) {
+                        const optionStyle3 = optionStyle2.children[key3];
+                        if (optionStyle3.default) {
+                            selectedStyle3[key2] = {
+                                key: key3,
+                                name: optionStyle3.name,
+                                parent: optionStyle2.name
+                            };
+                            break;
+                        }
+                    }
+                    if (Object.keys(selectedStyle3).length > 0) {
+                        selectedStyle1 = {"children": selectedStyle3}
+                    }
+
                 }
             }
-
-            if (selectedStyle) {
-                this.totalSelectedData[key1] = selectedStyle;
+            if (selectedStyle1) {
+                this.totalSelectedData[key1] = selectedStyle1;
             }
         }
 

@@ -33,3 +33,6 @@
     cursor: pointer;
     display: block;
 }
+.cs-active .cs-select-item {
+    border: solid 1px #000000 !important;
+}

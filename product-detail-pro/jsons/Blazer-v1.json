@@ -13,8 +13,7 @@
         "Options": {
           "Fabric1": {
             "name": "Fabric 1",
-            "image": "/product-detail-pro/images/fabric1.avif",
-            "default": true
+            "image": "/product-detail-pro/images/fabric1.avif"
           },
           "Fabric2": {
             "name": "Fabric 2",
@@ -43,8 +42,8 @@
           },
           "Fabric7": {
             "name": "Fabric 7",
-            "image": "/product-detail-pro/images/fabric7.avif"
-            
+            "image": "/product-detail-pro/images/fabric7.avif",
+            "default": true
           },
           "Fabric8": {
             "name": "Fabric 8",
@@ -356,57 +355,42 @@
       "Fabric7": "/wp-content/uploads/2023/10/006.webp",
       "Fabric8": "/wp-content/uploads/2023/10/007.webp",
       "Fabric9": "/wp-content/uploads/2023/10/010.webp",
-      "Fabric10": "/wp-content/uploads/2023/10/009.webp",
-      "NotchLapel": "/product-detail-pro/images/MAIN_1.webp",
-      "PeakLapel": "/product-detail-pro/images/MAIN_2.webp",
-      "ShawlLapel": "/product-detail-pro/images/MAIN_3.webp",
-      "Button1": "/product-detail-pro/images/MAIN_1.webp",
-      "Button2": "/product-detail-pro/images/MAIN_2.webp",
-      "Button25": "/product-detail-pro/images/MAIN_3.webp",
-      "Button3": "/product-detail-pro/images/MAIN_1.webp",
-      "ButtonsDoubleBreasted4": "/product-detail-pro/images/MAIN_2.webp",
-      "ButtonsDoubleBreasted6": "/product-detail-pro/images/MAIN_3.webp",
-      "BoatShape": "/product-detail-pro/images/MAIN_4.webp",
-      "ChestPocketPatch": "/product-detail-pro/images/MAIN_2.webp",
-      "ChestPocketRoundedPatch": "/product-detail-pro/images/MAIN_3.webp",
-      "ChestPocketPleatedPatch": "/product-detail-pro/images/MAIN_1.webp",
-      "SmallFlap": "/product-detail-pro/images/MAIN_2.webp",
-      "LargeFlap": "/product-detail-pro/images/MAIN_3.webp",
-      "SlantedFlap": "/product-detail-pro/images/MAIN_1.webp",
-      "Jetted": "/product-detail-pro/images/MAIN_2.webp",
-      "SlantedJetted": "/product-detail-pro/images/MAIN_3.webp",
-      "SidePocketPatch": "/product-detail-pro/images/MAIN_1.webp",
-      "SidePocketRoundedPatch": "/product-detail-pro/images/MAIN_2.webp",
-      "SidePocketPleatedPatch": "/product-detail-pro/images/MAIN_3.webp",
-      "TicketPocketYes": "/product-detail-pro/images/MAIN_1.webp",
-      "Novent": "/product-detail-pro/images/MAIN_2.webp",
-      "Singleevent": "/product-detail-pro/images/MAIN_3.webp",
-      "Doublevent": "/product-detail-pro/images/MAIN_1.webp",
-      "KissingButtons3": "/product-detail-pro/images/MAIN_2.webp",
-      "KissingButtons4": "/product-detail-pro/images/MAIN_3.webp",
-      "KissingButtons5": "/product-detail-pro/images/MAIN_1.webp",
-      "FullLined": "/product-detail-pro/images/MAIN_2.webp",
-      "Lined1_2": "/product-detail-pro/images/MAIN_3.webp",
-      "ButterflyLining": "/product-detail-pro/images/MAIN_1.webp",
-      "Unlined": "/product-detail-pro/images/MAIN_2.webp",
-      "Structured": "/product-detail-pro/images/MAIN_3.webp",
-      "Padded": "/product-detail-pro/images/MAIN_1.webp",
-      "Natural": "/product-detail-pro/images/MAIN_2.webp",
-      "Unstructured": "/product-detail-pro/images/MAIN_3.webp"
-    },
-    "Default": {
-      "keyFabric": {
-        "key": "Fabric1",
-        "name": "Fabric 1",
-        "parent": "Fabric"
-      },
-      "styles": {
-        "Closure": {
-          "key": "Button2",
-          "name": "2 Button",
-          "parent": "Closure"
-        }
-      },
-      "size": null
+      "Fabric10": "/wp-content/uploads/2023/10/009.webp", 
+      "NotchLapel": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "PeakLapel": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ShawlLapel": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Button1": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Button2": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Button25": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Button3": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ButtonsDoubleBreasted4": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ButtonsDoubleBreasted6": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "BoatShape": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ChestPocketPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ChestPocketRoundedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ChestPocketPleatedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "SmallFlap": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "LargeFlap": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "SlantedFlap": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Jetted": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "SlantedJetted": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "SidePocketPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "SidePocketRoundedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "SidePocketPleatedPatch": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "TicketPocketYes": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Novent": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Singleevent": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Doublevent": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "KissingButtons3": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "KissingButtons4": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "KissingButtons5": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "FullLined": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Lined1_2": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "ButterflyLining": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Unlined": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Structured": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Padded": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Natural": "/wp-content/uploads/2023/10/nut-ao.avif",
+      "Unstructured": "/wp-content/uploads/2023/10/nut-ao.avif"
     }
   }

@@ -1,5 +1,5 @@
 <template>
-    <div class=" _group _w-full _border _pt-1.5 _rounded-md focus:_border-black hover:_border-gray-300 _my-2">
+    <div class="cs-select-item _group _w-full _border _pt-1.5 _rounded-md focus:_border-black hover:_border-gray-300 _my-2">
         <div class=" _mx-auto _flex _justify-center _relative">
             <img class="_h-[90px] _w-[97%] _rounded-md" :src="imageUrl" alt="">
             <div class="_absolute _hidden group-hover:_block group-focus:_block  _top-2 _right-4">

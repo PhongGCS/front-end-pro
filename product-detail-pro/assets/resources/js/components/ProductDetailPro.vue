@@ -1,12 +1,14 @@
 <template>
   <div class="product-detail-pro">
      <section>
+        {{totalSelectedData}}  
     <div class="_w-100vw _overflow-hidden">
             <div class="md:_flex md:_h-[calc(100vh-102px)]">
-                {{totalSelectedData}}
+                
                 <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full">
                     <div :class="{'fullscreen-container': zoomed}" class="md:_w-4/6 _bg-[#efefef] _cursor-none md:_h-[calc(100vh-102px)] _h-[60vh] _relative _overflow-hidden" id="image-container">
-                        <div id="main-image">                            
+                        <div id="main-image">  
+                                                    
                             <img
                                 v-for="(image, index) in mainImages"
                                 :key="index"
@@ -47,10 +49,10 @@
                             </div>
                             <div class="_w-[85%] _mx-auto _my-1">
                                 <div>
-                                    <div v-if="fabric.Info.Style === 'FabricComponent'">
-                                        <div v-for="(fabricData, fabricName) in fabric.Options" :key="fabricName" @click.prevent="changeFabric(fabricData, fabricName)">
-                                            <FabricComponent :title="fabricData.name" :price="fabricData.price" :imageUrl="fabricData.image" />
-                                        </div>
+                                    <div v-for="(fabricData, fabricName) in fabric.Options" :key="fabricName" @click.prevent="changeFabric(fabricData, fabricName)"
+                                        :class="totalSelectedData['Fabric'] && totalSelectedData['Fabric'].key === fabricName ? 'cs-active' : ''"
+                                    >
+                                        <FabricComponent :title="fabricData.name" :price="fabricData.price" :imageUrl="fabricData.image" />
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +66,7 @@
                             <div class="_w-[85%] _mx-auto _my-1">
                                 <div>
                                     <div v-for="(styleData, styleName) in styles" :key="styleName" @click.prevent="changeStyle(styleData, styleName)">
-                                        <StyleComponent :title="styleData.Info.name" :selected="JSON.stringify(totalSelectedData.styles[styleName])" />
+                                        <StyleComponent :key="resetStyleLevel1" :title="styleData.Info.name" :selected="totalSelectedData[styleName]" />
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +89,9 @@
                         </div>
                         <div id="tab-styledetail" class="_overflow-y-auto _h-auto tab-style-detail" :class="activeTab === 'StyleDetail' ? '_block' : '_hidden'">
                             <div class="_w-[85%] _mx-auto _my-1">
-                            <div v-for="(styleData, styleName ) in styleDataDetail" :key="styleName">
+                            <div v-for="(styleData, styleName ) in styleDataDetail" :key="styleName" 
+                            :class="currentStyleKey && totalSelectedData[currentStyleKey] && totalSelectedData[currentStyleKey].key === styleName ? 'cs-active' : ''"
+                            >
                                 <StyleDetailComponent  styleDataDetail.options @emitChooseStyleDetailChildren="chooseStyleDetailChildren" @emitChooseStyleDetail="chooseStyleDetail" :style-data="styleData" :style-key="styleName" :children="styleData.children" />
                             </div>
                             
@@ -149,18 +153,8 @@ export default {
         activeTab: 'Fabric',
         mainImage: null,
         mainImages: [],
-        totalSelectedData: {
-            keyFabric: null,
-            styles : {
-            },
-            size: null
-        },
-        totalSelectedDisplay: {
-           keyFabric: null,
-            styles : {
-            },
-            size: null 
-        },
+        totalSelectedData: {},
+        totalSelectedDisplay: {},
         styleDataDetail: null,
         currentStyleKey : null,
         currentStyleName: null,
@@ -168,7 +162,8 @@ export default {
         isChangeStyle: true,
         imageListKey : [],
         summaryArray: [],
-        jsonAddToCart: {}
+        jsonAddToCart: {},
+        resetStyleLevel1: 0
     }
   },
   components: {
@@ -180,14 +175,13 @@ export default {
     SummaryData
 },
   beforeMount() {
-    this.mainImage = this.productData.Image
+    this.mainImage = this.productData.Image;
+    this.buildInitDefault();
     // gsap.to("#tab-fabric", {rotation: 360, x: 100, duration: 1});
 
   },
   mounted() {
     gsap.fromTo('#tab-fabric', { x: `${1 * 100}%`, duration: 0.5 },{ x: 0 });
-
-
     const imageContainer = document.getElementById("image-container");
     const mainImage = document.getElementById("main-image");
     const hoverIcon = document.getElementById("hover-icon");
@@ -202,8 +196,48 @@ export default {
         this.zoomed = !this.zoomed; // Toggle the zoom state
     });
 
+    // Map default key;
+
   },
   methods: {
+    buildInitDefault () {
+        let selectedFabric = null;
+        for (const key in this.fabric.Options) {
+            const option = this.fabric.Options[key];
+            if (option.default || !selectedFabric) {
+                selectedFabric = {
+                    key: key,
+                    name: option.name,
+                    parent: "Fabric"
+                };
+            }
+        }
+
+        if (selectedFabric) {
+            this.totalSelectedData["Fabric"] = selectedFabric;
+        }
+
+        for (const key1 in this.styles) {
+            let selectedStyle = null;
+            for (const key2 in this.styles[key1].Options) {
+                const optionStyle = this.styles[key1].Options[key2];
+                if (optionStyle.default) {
+                    selectedStyle = {
+                        key: key2,
+                        name: optionStyle.name,
+                        parent: this.styles[key1].Info.name
+                    };
+                    break;
+                }
+            }
+
+            if (selectedStyle) {
+                this.totalSelectedData[key1] = selectedStyle;
+            }
+        }
+
+        this.findImage();
+    },
     buildDataResultJSON() {
         this.jsonAddToCart =  {
             productId: this.productId,
@@ -212,26 +246,17 @@ export default {
     },
     getSummary() {
         this.summaryArray = [];
-        let fabric = this.totalSelectedData.keyFabric;
-        if (fabric.key && fabric.name && fabric.parent) {
-            this.summaryArray.push({
-                "key": fabric.key,
-                "name": fabric.name,
-                "parent": fabric.parent
-            });
-        }
-        let styles = this.totalSelectedData.styles;
-        for (const key in styles) {
-            if (styles[key].key && styles[key].name && styles[key].parent) {
+        for (const key in this.totalSelectedData) {
+            if (this.totalSelectedData[key].key && this.totalSelectedData[key].name && this.totalSelectedData[key].parent) {
                 this.summaryArray.push({
-                    "key": styles[key].key,
-                    "name": styles[key].name,
-                    "parent": styles[key].parent
+                    "key": this.totalSelectedData[key].key,
+                    "name": this.totalSelectedData[key].name,
+                    "parent": this.totalSelectedData[key].parent
                 });
             }
-            if (styles[key].children) {
-                for (const childKey in styles[key].children) {
-                const child = styles[key].children[childKey];
+            if (this.totalSelectedData[key].children) {
+                for (const childKey in this.totalSelectedData[key].children) {
+                const child = this.totalSelectedData[key].children[childKey];
                 this.summaryArray.push({
                     "key": child.key,
                     "name": child.name,
@@ -239,15 +264,6 @@ export default {
                 });
                 }
             }
-        }
-
-        let size = this.totalSelectedData.size;
-        if (size) {
-            this.summaryArray.push({
-                "key": "size",
-                "name": size,
-                "parent": "Size"
-            });
         }
     },
     // Function to traverse the JSON and collect values
@@ -277,7 +293,7 @@ export default {
     },
     changeFabric(fabricData, keyFabric) {
       console.log("Get image match " + keyFabric);
-      this.totalSelectedData.keyFabric = { key: keyFabric, name: fabricData.name, parent: "Fabric"};
+      this.totalSelectedData["Fabric"] = { key: keyFabric, name: fabricData.name, parent: "Fabric"};
       this.findImage();
       
     },
@@ -288,8 +304,8 @@ export default {
     changeStyle(styleData, styleKey) { // Chọn style. Load option
         this.changeTab("StyleDetail");
         this.styleDataDetail = styleData.Options;
-        if(this.totalSelectedData.styles[styleKey] == null) {
-            this.totalSelectedData.styles[styleKey] = {"children": {}}; 
+        if(this.totalSelectedData[styleKey] == null) {
+            this.totalSelectedData[styleKey] = {"children": {}}; 
         }
         this.currentStyleKey = styleKey;
         this.currentStyleName = styleData.Info.name;
@@ -297,7 +313,7 @@ export default {
     chooseStyleDetail(styleName, styleData) { // Chọn style level 1: style: { level0 : {key, name, parent} }
         this.changeTab("Style");
         if(this.currentStyleKey) { 
-            this.totalSelectedData.styles[this.currentStyleKey] = {key: styleName, name: styleData.name, parent: this.currentStyleName};
+            this.totalSelectedData[this.currentStyleKey] = {key: styleName, name: styleData.name, parent: this.currentStyleName};
             this.findImage();
         } else {
           throw new Error("Incorrect currentStyleKey: " + currentStyleKey);  
@@ -305,8 +321,9 @@ export default {
     },
     chooseStyleDetailChildren(styleName, styleData, parentKey, parentName) {
         this.changeTab("Style"); // Chọn style level 2 sau đó sẽ đưa vào  style: { level0 : { children:  {key, name, parent} } }
+        this.resetStyleLevel1++;
         if(this.currentStyleKey) {
-            this.totalSelectedData.styles[this.currentStyleKey]['children'][parentKey] = {key: styleName, name: styleData.name, parent: parentName};
+            this.totalSelectedData[this.currentStyleKey]['children'][parentKey] = {key: styleName, name: styleData.name, parent: parentName};
             this.findImage();
         } else {
           throw new Error("Incorrect currentStyleKey: " + currentStyleKey);  
@@ -332,7 +349,7 @@ export default {
         }
     },
     handleSizeEmitted(size) {
-        this.totalSelectedData.size = size;
+        this.totalSelectedData["size"] = { key: size, name: size, parent: "Size"};
         this.changeTab("Summary");
     }
   }

@@ -8,8 +8,9 @@
 
 </head>
 <body>
+    <?php include "./header.php"; ?>
     <?php
-     $jsonFilePath = __DIR__ . '/jsons/product-2.json';
+     $jsonFilePath = __DIR__ . '/jsons/Trouser-v1.json';
      $jsonData = file_get_contents($jsonFilePath);
      $productData = json_decode($jsonData);
      ?>

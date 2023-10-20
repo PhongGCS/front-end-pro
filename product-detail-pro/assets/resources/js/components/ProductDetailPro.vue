@@ -1,7 +1,7 @@
 <template>
   <div class="product-detail-pro">
      <section>
-    <div class="_w-100vw _overflow-hidden">
+    <div class="_w-screen _overflow-hidden">
             <div class="md:_flex md:_h-[calc(100vh-102px)]">
                 
                 <div class="md:_flex _overflow-y-auto md:_h-[calc(100vh-102px)] md:_mt-0 _mt-10  _h-[calc(90vh-119px)] md:_w-full">
@@ -30,7 +30,7 @@
                         </div>
                         <div id="hover-icon" class="_hidden _text-white _flex _justify-center _items-center _pt-[3px]"><p>{{ (zoomed) ? '-' : '+'}}</p></div>
                     </div>
-                    <div class="md:_w-2/6 md:_h-[calc(100vh-102px)] _flex _flex-col ">
+                    <div class="md:_w-2/6 md:_h-[calc(100vh-102px)] _flex _flex-col _overflow-hidden">
                         <div class="_text-center _flex _justify-between _text-sm _py-2 _transition-transform _duration-300 md:_static _fixed _top-0 _right-0 _left-0  _bg-white">
                             <TabItemHeading
                                 v-for="(tab, index) in tabs"
